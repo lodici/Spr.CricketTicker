@@ -1,0 +1,41 @@
+<Project 
+	DefaultTargets="Build" 
+	xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<!-- Parameters passed to script from CI server -->
+	<PropertyGroup>
+		<BuildNumber>$(BUILD_NUMBER)</BuildNumber>
+		<Sln>$(SLN_FILENAME)</Sln>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<SrcDir>..</SrcDir>
+	</PropertyGroup>
+	
+	<!-- Restore NuGet Packages -->
+    <Import Project="RestoreNugetPackages.targets" />
+		
+	<ItemGroup>
+		<AssemblyInfoFiles Include="$(SrcDir)\**\AssemblyInfo.*" />
+	</ItemGroup>	
+	
+	<!-- This does not require the DLL to exist during MSBuild parse stage, where-as the Import command does. -->
+	<UsingTask
+		TaskName="MSBuild.Community.Tasks.FileUpdate"
+		AssemblyFile="$(SrcDir)\packages\MSBuildTasks.1.3.0.528\lib\net20\MSBuild.Community.Tasks.dll" />		
+				
+	<Target Name="Build" DependsOnTargets="RestoreNugetPackages">
+	
+		<FileUpdate 
+			Files="@(AssemblyInfoFiles)"
+			Regex="(AssemblyVersion|AssemblyFileVersion)\(&quot;(\d+)\.(\d+)\.(\d+|\*)\.(\d+|\*)&quot;\)"
+			ReplacementText="$1(&quot;$2.$3.$(BuildNumber).0&quot;)" />
+
+		<MSBuild
+			Properties="Configuration=Release"
+			Targets="Clean;Rebuild" 
+			Projects="$(SrcDir)\$(Sln)" />  
+	
+	</Target> 
+	
+</Project>

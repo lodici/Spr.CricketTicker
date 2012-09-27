@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<query xmlns:yahoo="http://www.yahooapis.com/v1/base.rng"
+	   yahoo:count="5"
+	   yahoo:created="2012-09-11T11:34:58Z"
+	   yahoo:lang="en-US">
+	<diagnostics>
+		<publiclyCallable>true</publiclyCallable>
+		<url execution-start-time="1"
+			 execution-stop-time="1"
+			 execution-time="0"
+			 proxy="DEFAULT"><![CDATA[store://HpFd40jgIuzAf4VrtOOToe]]></url>
+		<url execution-start-time="3"
+			 execution-stop-time="644"
+			 execution-time="641"><![CDATA[http://cricketwebservice/ws/cwsapi/matches.php?type=upcoming&offset=0&count=5]]></url>
+		<user-time>644</user-time>
+		<service-time>641</service-time>
+		<build-version>29730</build-version>
+	</diagnostics>
+	<results>
+		<Match group=""
+			   matchid="108611"
+			   mtype="t20"
+			   series_id="11271"
+			   series_name="New Zealand in India T20 Series, 2 T20 Cricket Series, 2012"
+			   stage="heat"
+			   status="pre">
+			<MatchNo>2nd T20I</MatchNo>
+			<Venue venueid="91">MA Chidambaram Stadium, Chennai</Venue>
+			<StartDate>2012-09-11T19:00:00+05:30</StartDate>
+			<EndDate>2012-09-11T23:00:00+05:30</EndDate>
+			<MatchTimeSpan>Day-Night</MatchTimeSpan>
+			<Team Team="India"
+				  role=""
+				  teamid="4"/>
+			<Team Team="New Zealand"
+				  role=""
+				  teamid="5"/>
+			<date_match_start>20120911133000</date_match_start>
+			<date_match_end>20120911173000</date_match_end>
+		</Match>
+		<Match group=""
+			   matchid="104908"
+			   mtype="t20"
+			   series_id="11226"
+			   series_name="South Africa in England T20 Series, 3 T20 Cricket Series, 2012"
+			   stage="heat"
+			   status="pre">
+			<MatchNo>3rd T20I</MatchNo>
+			<Venue venueid="50">Edgbaston, Birmingham</Venue>
+			<StartDate>2012-09-12T23:00:00+05:30</StartDate>
+			<EndDate>2012-09-13T03:00:00+05:30</EndDate>
+			<MatchTimeSpan>Day-Night</MatchTimeSpan>
+			<Team Team="England"
+				  role=""
+				  teamid="3"/>
+			<Team Team="South Africa"
+				  role=""
+				  teamid="7"/>
+			<date_match_start>20120912173000</date_match_start>
+			<date_match_end>20120912213000</date_match_end>
+		</Match>
+		<Match group=""
+			   matchid="184569"
+			   mtype="t20"
+			   series_id="11354"
+			   series_name="ICC World Twenty20 Warm-up Matches, 2012"
+			   stage="heat"
+			   status="pre">
+			<MatchNo>Match 2</MatchNo>
+			<Venue venueid="488">Nondescripts Cricket Club, Colombo</Venue>
+			<StartDate>2012-09-13T09:30:00+05:30</StartDate>
+			<EndDate>2012-09-13T13:30:00+05:30</EndDate>
+			<MatchTimeSpan>Day</MatchTimeSpan>
+			<Team Team="Sri Lanka"
+				  role=""
+				  teamid="8"/>
+			<Team Team="West Indies"
+				  role=""
+				  teamid="9"/>
+			<date_match_start>20120913040000</date_match_start>
+			<date_match_end>20120913080000</date_match_end>
+		</Match>
+		<Match group=""
+			   matchid="184570"
+			   mtype="t20"
+			   series_id="11354"
+			   series_name="ICC World Twenty20 Warm-up Matches, 2012"
+			   stage="heat"
+			   status="pre">
+			<MatchNo>Match 1</MatchNo>
+			<Venue venueid="377">Moors Sports Club Ground, Colombo</Venue>
+			<StartDate>2012-09-13T09:30:00+05:30</StartDate>
+			<EndDate>2012-09-13T13:30:00+05:30</EndDate>
+			<MatchTimeSpan>Day</MatchTimeSpan>
+			<Team Team="Ireland"
+				  role=""
+				  teamid="13"/>
+			<Team Team="Zimbabwe"
+				  role=""
+				  teamid="10"/>
+			<date_match_start>20120913040000</date_match_start>
+			<date_match_end>20120913080000</date_match_end>
+		</Match>
+		<Match group=""
+			   matchid="184572"
+			   mtype="t20"
+			   series_id="11354"
+			   series_name="ICC World Twenty20 Warm-up Matches, 2012"
+			   stage="heat"
+			   status="pre">
+			<MatchNo>Match 5</MatchNo>
+			<Venue venueid="300">Colts Cricket Club Ground, Colombo</Venue>
+			<StartDate>2012-09-15T09:30:00+05:30</StartDate>
+			<EndDate>2012-09-15T13:30:00+05:30</EndDate>
+			<MatchTimeSpan>Day</MatchTimeSpan>
+			<Team Team="Bangladesh"
+				  role=""
+				  teamid="2"/>
+			<Team Team="Zimbabwe"
+				  role=""
+				  teamid="10"/>
+			<date_match_start>20120915040000</date_match_start>
+			<date_match_end>20120915080000</date_match_end>
+		</Match>
+	</results>
+</query>
+<!-- total: 644 -->
+<!-- engine9.yql.bf1.yahoo.com -->

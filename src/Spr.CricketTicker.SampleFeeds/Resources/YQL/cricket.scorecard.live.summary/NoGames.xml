@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query xmlns:yahoo="http://www.yahooapis.com/v1/base.rng"
+	   yahoo:count="0"
+	   yahoo:created="2012-08-21T14:33:56Z"
+	   yahoo:lang="en-US">
+	<diagnostics>
+		<publiclyCallable>true</publiclyCallable>
+		<url execution-start-time="1"
+			 execution-stop-time="2"
+			 execution-time="1"><![CDATA[store://3vynIg3fvfgqWvJcDWyob0]]></url>
+		<url execution-start-time="4"
+			 execution-stop-time="504"
+			 execution-time="500"><![CDATA[http://cricketwebservice/ws/cwsapi/live/livematches.php?output=summary]]></url>
+		<user-time>505</user-time>
+		<service-time>501</service-time>
+		<build-version>29401</build-version>
+	</diagnostics>
+	<results />
+</query>
+<!-- total: 505 -->
+<!-- engine1.yql.ac4.yahoo.com -->

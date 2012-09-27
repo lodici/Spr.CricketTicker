@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query xmlns:yahoo="http://www.yahooapis.com/v1/base.rng"
+    yahoo:count="5" yahoo:created="2012-08-27T19:52:14Z" yahoo:lang="en-US">
+    <diagnostics>
+        <publiclyCallable>true</publiclyCallable>
+        <url execution-start-time="2" execution-stop-time="3"
+            execution-time="1" proxy="DEFAULT"><![CDATA[store://HpFd40jgIuzAf4VrtOOToe]]></url>
+        <url execution-start-time="5" execution-stop-time="589" execution-time="584"><![CDATA[http://cricketwebservice/ws/cwsapi/matches.php?type=upcoming&offset=0&count=5]]></url>
+        <user-time>590</user-time>
+        <service-time>585</service-time>
+        <build-version>29730</build-version>
+    </diagnostics> 
+    <results>
+        <Match group="" matchid="104902" mtype="odi" series_id="11225"
+            series_name="South Africa in England ODI Series, 5 ODI Cricket Series, 2012"
+            stage="heat" status="pre">
+            <MatchNo>2nd ODI</MatchNo>
+            <Venue venueid="159">The Rose Bowl, Southampton</Venue>
+            <StartDate>2012-08-28T17:30:00+05:30</StartDate>
+            <EndDate>2012-08-29T01:30:00+05:30</EndDate>
+            <MatchTimeSpan>Day-Night</MatchTimeSpan>
+            <Team Team="England" role="" teamid="3"/>
+            <Team Team="South Africa" role="" teamid="7"/>
+            <date_match_start>20120828120000</date_match_start>
+            <date_match_end>20120828200000</date_match_end>
+        </Match>
+        <Match group="" matchid="184298" mtype="odi" series_id="11308"
+            series_name="Australia vs Pakistan ODI Series, 3 ODI Cricket Series in United Arab Emirates                                                                                , 2012"
+            stage="heat" status="pre">
+            <MatchNo>1st ODI</MatchNo>
+            <Venue venueid="143">Sharjah Cricket Association Stadium, Sharjah</Venue>
+            <StartDate>2012-08-28T19:30:00+05:30</StartDate>
+            <EndDate>2012-08-29T03:30:00+05:30</EndDate>
+            <MatchTimeSpan>Day-Night</MatchTimeSpan>
+            <Team Team="Pakistan" role="" teamid="6"/>
+            <Team Team="Australia" role="" teamid="1"/>
+            <date_match_start>20120828140000</date_match_start>
+            <date_match_end>20120828220000</date_match_end>
+        </Match>
+        <Match group="" matchid="108609" mtype="test" series_id="11270"
+            series_name="New Zealand in India Test Series, 2 Test Cricket Series, 2012"
+            stage="heat" status="pre">
+            <MatchNo>2nd Test</MatchNo>
+            <Venue venueid="90">M.Chinnaswamy Stadium, Bengaluru</Venue>
+            <StartDate>2012-08-31T09:30:00+05:30</StartDate>
+            <EndDate>2012-09-04T16:30:00+05:30</EndDate>
+            <MatchTimeSpan>Day</MatchTimeSpan>
+            <Team Team="India" role="" teamid="4"/>
+            <Team Team="New Zealand" role="" teamid="5"/>
+            <date_match_start>20120831040000</date_match_start>
+            <date_match_end>20120904110000</date_match_end>
+        </Match>
+        <Match group="" matchid="104903" mtype="odi" series_id="11225"
+            series_name="South Africa in England ODI Series, 5 ODI Cricket Series, 2012"
+            stage="heat" status="pre">
+            <MatchNo>3rd ODI</MatchNo>
+            <Venue venueid="81">The Oval, London</Venue>
+            <StartDate>2012-08-31T17:30:00+05:30</StartDate>
+            <EndDate>2012-09-01T01:30:00+05:30</EndDate>
+            <MatchTimeSpan>Day-Night</MatchTimeSpan>
+            <Team Team="England" role="" teamid="3"/>
+            <Team Team="South Africa" role="" teamid="7"/>
+            <date_match_start>20120831120000</date_match_start>
+            <date_match_end>20120831200000</date_match_end>
+        </Match>
+        <Match group="" matchid="184299" mtype="odi" series_id="11308"
+            series_name="Australia vs Pakistan ODI Series, 3 ODI Cricket Series in United Arab Emirates                                                                                , 2012"
+            stage="heat" status="pre">
+            <MatchNo>2nd ODI</MatchNo>
+            <Venue venueid="174">Sheikh Zayed Stadium, Abu Dhabi</Venue>
+            <StartDate>2012-08-31T19:30:00+05:30</StartDate>
+            <EndDate>2012-09-01T03:30:00+05:30</EndDate>
+            <MatchTimeSpan>Day-Night</MatchTimeSpan>
+            <Team Team="Pakistan" role="" teamid="6"/>
+            <Team Team="Australia" role="" teamid="1"/>
+            <date_match_start>20120831140000</date_match_start>
+            <date_match_end>20120831220000</date_match_end>
+        </Match>
+    </results>
+</query>

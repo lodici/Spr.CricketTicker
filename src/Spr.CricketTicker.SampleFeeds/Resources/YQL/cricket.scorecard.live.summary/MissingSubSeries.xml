@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<query xmlns:yahoo="http://www.yahooapis.com/v1/base.rng"
+	   yahoo:count="1"
+	   yahoo:created="2012-09-17T09:29:18Z"
+	   yahoo:lang="en-US">
+	<diagnostics>
+		<publiclyCallable>true</publiclyCallable>
+		<url execution-start-time="2"
+			 execution-stop-time="3"
+			 execution-time="1"><![CDATA[store://3vynIg3fvfgqWvJcDWyob0]]></url>
+		<url execution-start-time="4"
+			 execution-stop-time="1000"
+			 execution-time="996"><![CDATA[http://cricketwebservice/ws/cwsapi/live/livematches.php?output=summary]]></url>
+		<user-time>1000</user-time>
+		<service-time>997</service-time>
+		<build-version>30341</build-version>
+	</diagnostics>
+	<results>
+		<Scorecard>
+			<v>0</v>
+			<mid>184575</mid>
+			<m>3</m>
+			<series>
+				<series_id>11354</series_id>
+				<series_name>ICC World Twenty20 Warm-up Matches, 2012</series_name>
+			</series>
+			<place>
+				<vid>131</vid>
+				<stadium>R.Premadasa Stadium, Colombo</stadium>
+				<city>Colombo</city>
+				<country>Sri Lanka</country>
+				<Gimaget>http://l.yimg.com/qx/cricket/fufp/images/venue_131_thumb-29-3-2011-518c402caf6ecdabc27df5178baa1d30.jpg</Gimaget>
+				<date>20120917083000</date>
+				<enddate>20120917123000</enddate>
+			</place>
+			<mn>Match 11</mn>
+			<teams>
+				<i>4</i>
+				<fn>India</fn>
+				<sn>IND</sn>
+				<logo>
+					<std>http://l.yimg.com/qx/cricket/fufp/images/india-1-2-2011-c82ce1c21776a75000cec40af7058fa1.jpg</std>
+					<small>http://l.yimg.com/qx/cricket/fufp/images/india_small-1-2-2011-021c27bee1db2e4878fbdc7d9b2c05be.jpg</small>
+				</logo>
+				<flag>
+					<std>http://l.yimg.com/qx/cricket/fufp/images/india_flag-1-2-2011-0fa2af8a7fb72b445cf841cf27ff119a.gif</std>
+					<small>http://l.yimg.com/qx/cricket/fufp/images/india_flag_small-1-2-2011-19e94f1d1081d5dde82b381bf8c783b6.gif</small>
+					<roundstd>http://l.yimg.com/qx/cricket/fufp/images/4-11-2-2012-5651d44338907e593f94773398fac650.png</roundstd>
+					<roundsmall>http://l.yimg.com/qx/cricket/fufp/images/4_s-11-2-2012-dd77610cb84ba225571610f4d3b52097.png</roundsmall>
+					<roundlarge>http://l.yimg.com/qx/cricket/fufp/images/4_l-11-2-2012-b8ce58599a586b164189b090b45c07e1.png</roundlarge>
+				</flag>
+			</teams>
+			<teams>
+				<i>6</i>
+				<fn>Pakistan</fn>
+				<sn>PAK</sn>
+				<logo>
+					<std>http://l.yimg.com/qx/cricket/fufp/images/pakistan-1-2-2011-bdf961e0e7024d3b3ad60e26d52eacaf.jpg</std>
+					<small>http://l.yimg.com/qx/cricket/fufp/images/pakistan_small-1-2-2011-100cad3af0225b9649abd07977acb42d.jpg</small>
+				</logo>
+				<flag>
+					<std>http://l.yimg.com/qx/cricket/fufp/images/pakistan_flag-1-2-2011-f99a8132f62ed22d64b985c2ba0d65eb.gif</std>
+					<small>http://l.yimg.com/qx/cricket/fufp/images/pakistan_flag_small-1-2-2011-5bbc7ebe24b9bc2460e131bfc9cafd78.gif</small>
+					<roundstd>http://l.yimg.com/qx/cricket/fufp/images/6-11-2-2012-e492bb0be566324796f25d3bcd2c3019.png</roundstd>
+					<roundsmall>http://l.yimg.com/qx/cricket/fufp/images/6_s-11-2-2012-2ef4be67daf68f843f48115ff5ba8f1a.png</roundsmall>
+					<roundlarge>http://l.yimg.com/qx/cricket/fufp/images/6_l-11-2-2012-472fc93551b80e5564b9fd0355191a4e.png</roundlarge>
+				</flag>
+			</teams>
+			<past_ings>
+				<s>
+					<t>1</t>
+					<i>1</i>
+					<ps>0</ps>
+					<stay_live>Yes</stay_live>
+					<a>
+						<fo>0</fo>
+						<pp />
+						<i>4</i>
+						<cr>8.26</cr>
+						<r>113</r>
+						<o>13.4</o>
+						<w>2</w>
+						<b>0</b>
+						<lb>2</lb>
+						<wd>5</wd>
+						<nb>0</nb>
+						<pt>0</pt>
+						<l>0</l>
+						<cp>
+							<cp>68</cp>
+							<bls>50</bls>
+							<s>2</s>
+						</cp>
+					</a>
+					<tz>+05:30</tz>
+				</s>
+				<d>
+					<a>
+						<t>
+							<i>3993</i>
+							<a>3</a>
+							<c>Batting</c>
+							<dt />
+							<fd>0</fd>
+							<bd>0</bd>
+							<b>28</b>
+							<r>42</r>
+							<sr>150</sr>
+							<four>5</four>
+							<six>0</six>
+							<name>Virat Kohli</name>
+						</t>
+						<t>
+							<i>3852</i>
+							<a>2</a>
+							<c>Batting</c>
+							<dt />
+							<fd>0</fd>
+							<bd>0</bd>
+							<b>24</b>
+							<r>28</r>
+							<sr>116.66666666667</sr>
+							<four>2</four>
+							<six>1</six>
+							<name>Rohit Sharma</name>
+						</t>
+					</a>
+				</d>
+			</past_ings>
+			<toss>
+				<win>4</win>
+				<bat>1</bat>
+				<text>xxx-xxx-xxx</text>
+			</toss>
+			<result>0</result>
+			<ms>Play in Progress</ms>
+			<mt>3</mt>
+			<cts>1347874155</cts>
+		</Scorecard>
+	</results>
+</query>
+<!-- total: 1000 -->
+<!-- engine7.yql.ac4.yahoo.com -->

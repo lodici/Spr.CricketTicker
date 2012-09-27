@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="YqlUpcomingCricketGamesUri" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20cricket.upcoming_matches&amp;diagnostics=true&amp;env=store%3A%2F%2F0TxIGQMQbObzvU4Apia0V0</Value>
+    </Setting>
+    <Setting Name="YqlLiveCricketGamesUri" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20cricket.scorecard.live.summary&amp;diagnostics=true&amp;env=store%3A%2F%2F0TxIGQMQbObzvU4Apia0V0</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

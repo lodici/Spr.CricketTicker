@@ -1,0 +1,23 @@
+<Project 
+	xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	
+    <PropertyGroup>
+        <SrcDir Condition="'$(SrcDir)'==''">..</SrcDir>
+    </PropertyGroup>
+	
+	<PropertyGroup>
+		<NugetExe>&quot;$(SrcDir)\.nuget\nuget.exe&quot;</NugetExe>
+		<NugetOutputDirectory>&quot;$(SrcDir)\packages&quot;</NugetOutputDirectory>
+		<NugetSource>&quot;http://antec1/SprNuGetFeed/nuget&quot;</NugetSource>
+	</PropertyGroup>	
+	
+	<ItemGroup>
+		<NugetPackages Include="$(SrcDir)\**\packages.config" />
+	</ItemGroup>		
+		
+	<Target Name="RestoreNugetPackages">
+		<Message Text ="Restoring Nuget Packages..." />
+		<Exec Command="$(NugetExe) install &quot;%(NugetPackages.RelativeDir)%(NugetPackages.Filename)%(NugetPackages.Extension)&quot; -source $(NugetSource) -o $(NugetOutputDirectory)"/>				
+    </Target>
+
+</Project>

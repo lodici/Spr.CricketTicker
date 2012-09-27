@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+	 xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension">
+		
+	<?define ProductName = "SPR Cricket Ticker" ?>
+	<?define ProductCompany = "SPR Software" ?>
+	<?define ProductExe = "Spr.CricketTicker.exe" ?>
+	
+	<?ifdef env.MAJOR_VERSION ?>
+		<?define MajorVersion = "$(env.MAJOR_VERSION)" ?>
+	<?else?>
+		<?define MajorVersion = "1" ?>
+	<?endif?>
+	<?ifdef env.MINOR_VERSION ?>
+		<?define MinorVersion = "$(env.MINOR_VERSION)" ?>
+	<?else?>
+		<?define MinorVersion = "0" ?>
+	<?endif?>		
+	<?ifdef env.BUILD_NUMBER ?>
+		<?define BuildNumber = "$(env.BUILD_NUMBER)" ?>
+	<?else?>
+		<?define BuildNumber = "100" ?>
+	<?endif?>
+		
+	<Product Id="*"
+		 UpgradeCode="7CCFD736-2E61-4A4B-80CB-0FDEA513676C"
+		 Name="$(var.ProductName)"
+		 Version="$(var.MajorVersion).$(var.MinorVersion).$(var.BuildNumber).0"
+		 Language="1033"
+		 Manufacturer="SPR">
+		
+		<Package Id="*"
+			InstallerVersion="200"
+			Compressed="yes"
+			Manufacturer="SPR"
+			Description="$(var.ProductName) Setup"
+			Comments="(c) SPR 2012"
+			InstallScope="perMachine" />
+		
+		<MajorUpgrade
+			Schedule="afterInstallInitialize"
+			DowngradeErrorMessage="A later version of $(var.ProductName) is already installed. Setup will now exit." />
+		
+		<!-- NET Framework version pre-requisite check -->
+		<!-- (see http://wix.sourceforge.net/manual-wix3/check_for_dotnet.htm) -->
+		<PropertyRef Id="NETFRAMEWORK40FULL"/>
+		<Condition Message="This application requires Microsoft .NET Framework 4.0 Runtime in order to run. Please install the .NET Framework and then run this installer again.">
+			<![CDATA[Installed OR NETFRAMEWORK40FULL]]>
+		</Condition>	
+						
+		<!-- NB! Icon element not recognised before Package element. -->
+		<Icon Id="product.ico" SourceFile="..\Spr.CricketTicker.Windows\Resources\product.ico"/>
+		<!-- Set the Installer's Icon in Add/Remove Programs -->
+		<Property Id="ARPPRODUCTICON" Value="product.ico" />				
+		
+		<Media Id="1"
+			   Cabinet="media1.cab"
+			   EmbedCab="yes" />
+ 
+		<!-- DIRECTORIES -->
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="DIR_Company" Name="$(var.ProductCompany)">
+					<Directory Id="DIR_Product" Name="$(var.ProductName)" />
+					<Directory Id="DIR_WIXUI_InstallDir" Name="$(var.ProductName)" />
+				</Directory>
+			</Directory>
+			<Directory Id="ProgramMenuFolder">
+				<Directory Id="DIR_SprShortcuts" Name="$(var.ProductCompany)">
+					<Directory Id="DIR_AppShortcuts" Name="$(var.ProductName)" />
+				</Directory>
+			</Directory>
+		</Directory>
+ 
+		<!-- FILES -->
+		<DirectoryRef Id="DIR_Product">
+			<Component Id="COM_MainExecutable" Guid="90288199-59E2-4706-B324-20D8306B2545">
+				<File Id="FILE_exe"
+					  Name="$(var.ProductExe)"
+					  Source="..\..\bin\$(var.Configuration)\$(var.ProductExe)"
+					  KeyPath="yes" />
+				<RemoveFile Id="PurgeLogsFiles" Name="*.log" On="uninstall" />
+			</Component>
+			<Component Id="COM_LibraryDll" Guid="2504CFF3-2752-4158-9540-276E12420EFA">
+				<File Id="FILE_LibraryDll"
+					  Source="..\..\bin\$(var.Configuration)\Spr.CricketTicker.Library.dll"
+					  KeyPath="yes" />
+			</Component>
+			<Component Id="COM_LoggerDll" Guid="810A4C68-6D89-48CA-AC56-9B46E427E4DA">
+				<File Id="FILE_LoggerDll"
+					  Source="..\..\bin\$(var.Configuration)\log4net.dll"
+					  KeyPath="yes" />
+			</Component>
+			<Component Id="COM_Config" Guid="E03CDBFA-D86D-4259-AF8D-4A4EA1F2BB30">
+				<File Id="FILE_Config"
+					  Source="..\..\bin\$(var.Configuration)\$(var.ProductExe).config"
+					  KeyPath="yes" />
+			</Component>			
+			<Component Id="COM_ExtensionsDll" Guid="B13901DA-3127-4BCF-B542-2E8061CEF0B9">
+				<File Id="FILE_ExtensionsDll"
+					  Source="..\..\bin\$(var.Configuration)\Spr.Extensions.dll"
+					  KeyPath="yes" />
+			</Component>
+			<Component Id="COM_YahooQueryLanguageDll" Guid="6E3F18B0-78D3-46FA-9BBF-7CB19726F181">
+				<File Id="FILE_YahooQueryLanguageDll"
+					  Source="..\..\bin\$(var.Configuration)\Spr.YahooQueryLanguage.dll"
+					  KeyPath="yes" />
+			</Component>			
+		</DirectoryRef>
+ 
+		<!-- SHORTCUTS -->
+		<DirectoryRef Id="DIR_SprShortcuts">
+			<Component Id="COM_SprShortcuts"  Guid="AF679BD4-A18B-492D-A576-26F128AFC5DE">
+				<RemoveFolder Id="RemoveSprShortcutsDir" On="uninstall" />
+				<RegistryValue Root="HKCU"
+							   Key="Software\$(var.ProductCompany)"
+							   Name="installed"
+							   Type="integer"
+							   Value="1"
+							   KeyPath="yes" />
+			</Component>
+		</DirectoryRef>					
+		<DirectoryRef Id="DIR_AppShortcuts">
+			<Component Id="COM_AppShortcuts" Guid="46F7E157-5F03-4340-8509-D4D89EE2ECCC"> 
+				<Shortcut Id="SHC_MainExecutable"
+						  Name="$(var.ProductName)"
+						  Description="$(var.ProductName)"
+						  Target="[DIR_Product]$(var.ProductExe)"
+						  Icon="product.ico"
+						  WorkingDirectory="DIR_Product" /> 
+				<Shortcut Id="SHC_Uninstall"
+						  Name="Uninstall $(var.ProductName)"
+						  Description="Uninstalls $(var.ProductName) and all of its components"
+						  Target="[System64Folder]msiexec.exe"
+						  Arguments="/x [ProductCode]" />
+				<RemoveFolder Id="RemoveAppShortcutsDir"
+							  On="uninstall" /> 
+				<RegistryValue Root="HKCU"
+							   Key="Software\$(var.ProductCompany)\$(var.ProductName)"
+							   Name="installed"
+							   Type="integer"
+							   Value="1"
+							   KeyPath="yes" /> 
+			</Component>
+		</DirectoryRef>
+		
+		<WixVariable Id="WixUIBannerBmp" Value="Bitmaps\bannrbmp.bmp" />
+		<WixVariable Id="WixUIDialogBmp" Value="Bitmaps\WixUIDialogBmp.bmp" />
+		
+		<!-- Activate GUI Wizard. Welcome, License and install location pages.
+			 Requires reference to WixUIExtension.dll -->
+		<Property Id="WIXUI_INSTALLDIR" Value="DIR_WIXUI_InstallDir" />
+		<UIRef Id="WixUI_InstallDir" />		
+ 
+		<!-- Every component must be included in a feature -->
+		<Feature Id="CoreFiles" Title="$(var.ProductName) Core Files" Level="1">
+			<ComponentRef Id="COM_MainExecutable"/>
+			<ComponentRef Id="COM_LibraryDll"/>
+			<ComponentRef Id="COM_LoggerDll"/>
+			<ComponentRef Id="COM_Config"/>
+			<ComponentRef Id="COM_ExtensionsDll"/>
+			<ComponentRef Id="COM_YahooQueryLanguageDll"/>
+			<ComponentRef Id="COM_SprShortcuts"/>
+			<ComponentRef Id="COM_AppShortcuts"/>
+		</Feature>		
+	
+	</Product>
+		 
+</Wix>

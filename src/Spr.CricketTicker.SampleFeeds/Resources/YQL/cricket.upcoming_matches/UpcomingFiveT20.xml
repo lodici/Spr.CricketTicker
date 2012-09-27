@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<query xmlns:yahoo="http://www.yahooapis.com/v1/base.rng"
+	   yahoo:count="5"
+	   yahoo:created="2012-09-05T19:41:51Z"
+	   yahoo:lang="en-US">
+	<diagnostics>
+		<publiclyCallable>true</publiclyCallable>
+		<url execution-start-time="2"
+			 execution-stop-time="2"
+			 execution-time="0"
+			 proxy="DEFAULT"><![CDATA[store://HpFd40jgIuzAf4VrtOOToe]]></url>
+		<url execution-start-time="4"
+			 execution-stop-time="627"
+			 execution-time="623"><![CDATA[http://cricketwebservice/ws/cwsapi/matches.php?type=upcoming&offset=0&count=5]]></url>
+		<user-time>628</user-time>
+		<service-time>623</service-time>
+		<build-version>29730</build-version>
+	</diagnostics>
+	<results>
+		<Match group=""
+			   matchid="184302"
+			   mtype="t20"
+			   series_id="11309"
+			   series_name="Australia vs Pakistan T20 Series, 3 T20 Cricket Series in United Arab Emirates                                                                                , 2012"
+			   stage="heat"
+			   status="pre">
+			<MatchNo>2nd T20I</MatchNo>
+			<Venue venueid="449">Dubai International Cricket Stadium, Dubai</Venue>
+			<StartDate>2012-09-07T21:30:00+05:30</StartDate>
+			<EndDate>2012-09-08T01:30:00+05:30</EndDate>
+			<MatchTimeSpan>Day-Night</MatchTimeSpan>
+			<Team Team="Pakistan"
+				  role=""
+				  teamid="6"/>
+			<Team Team="Australia"
+				  role=""
+				  teamid="1"/>
+			<date_match_start>20120907160000</date_match_start>
+			<date_match_end>20120907200000</date_match_end>
+		</Match>
+		<Match group=""
+			   matchid="104906"
+			   mtype="t20"
+			   series_id="11226"
+			   series_name="South Africa in England T20 Series, 3 T20 Cricket Series, 2012"
+			   stage="heat"
+			   status="pre">
+			<MatchNo>1st T20I</MatchNo>
+			<Venue venueid="135">Riverside Ground, Chester-le-Street</Venue>
+			<StartDate>2012-09-08T19:00:00+05:30</StartDate>
+			<EndDate>2012-09-08T23:00:00+05:30</EndDate>
+			<MatchTimeSpan>Day</MatchTimeSpan>
+			<Team Team="England"
+				  role=""
+				  teamid="3"/>
+			<Team Team="South Africa"
+				  role=""
+				  teamid="7"/>
+			<date_match_start>20120908133000</date_match_start>
+			<date_match_end>20120908173000</date_match_end>
+		</Match>
+		<Match group=""
+			   matchid="108610"
+			   mtype="t20"
+			   series_id="11271"
+			   series_name="New Zealand in India T20 Series, 2 T20 Cricket Series, 2012"
+			   stage="heat"
+			   status="pre">
+			<MatchNo>1st T20I</MatchNo>
+			<Venue venueid="185">ACA-VDCA Stadium, Visakhapatnam</Venue>
+			<StartDate>2012-09-08T20:00:00+05:30</StartDate>
+			<EndDate>2012-09-09T00:00:00+05:30</EndDate>
+			<MatchTimeSpan>Day-Night</MatchTimeSpan>
+			<Team Team="India"
+				  role=""
+				  teamid="4"/>
+			<Team Team="New Zealand"
+				  role=""
+				  teamid="5"/>
+			<date_match_start>20120908143000</date_match_start>
+			<date_match_end>20120908183000</date_match_end>
+		</Match>
+		<Match group=""
+			   matchid="184303"
+			   mtype="t20"
+			   series_id="11309"
+			   series_name="Australia vs Pakistan T20 Series, 3 T20 Cricket Series in United Arab Emirates                                                                                , 2012"
+			   stage="heat"
+			   status="pre">
+			<MatchNo>3rd T20I</MatchNo>
+			<Venue venueid="449">Dubai International Cricket Stadium, Dubai</Venue>
+			<StartDate>2012-09-10T21:30:00+05:30</StartDate>
+			<EndDate>2012-09-11T01:30:00+05:30</EndDate>
+			<MatchTimeSpan>Day-Night</MatchTimeSpan>
+			<Team Team="Pakistan"
+				  role=""
+				  teamid="6"/>
+			<Team Team="Australia"
+				  role=""
+				  teamid="1"/>
+			<date_match_start>20120910160000</date_match_start>
+			<date_match_end>20120910200000</date_match_end>
+		</Match>
+		<Match group=""
+			   matchid="104907"
+			   mtype="t20"
+			   series_id="11226"
+			   series_name="South Africa in England T20 Series, 3 T20 Cricket Series, 2012"
+			   stage="heat"
+			   status="pre">
+			<MatchNo>2nd T20I</MatchNo>
+			<Venue venueid="117">Old Trafford, Manchester</Venue>
+			<StartDate>2012-09-10T23:00:00+05:30</StartDate>
+			<EndDate>2012-09-11T03:00:00+05:30</EndDate>
+			<MatchTimeSpan>Day-Night</MatchTimeSpan>
+			<Team Team="England"
+				  role=""
+				  teamid="3"/>
+			<Team Team="South Africa"
+				  role=""
+				  teamid="7"/>
+			<date_match_start>20120910173000</date_match_start>
+			<date_match_end>20120910213000</date_match_end>
+		</Match>
+	</results>
+</query>
+<!-- total: 628 -->
+<!-- engine7.yql.bf1.yahoo.com -->
