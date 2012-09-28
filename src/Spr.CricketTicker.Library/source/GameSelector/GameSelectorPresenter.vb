@@ -1,11 +1,11 @@
 ﻿
 Public Class GameSelectorPresenter
 
-    Private Shared ReadOnly _log As log4net.ILog =
-        log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+    Private ReadOnly _log As log4net.ILog =
+        log4net.LogManager.GetLogger(Reflection.MethodBase.GetCurrentMethod().DeclaringType)
 
-    Private _view As IGameSelectorView
-    Private _service As ICricketService
+    Private ReadOnly _view As IGameSelectorView
+    Private ReadOnly _service As ICricketService
     Private _gameId As String = String.Empty
     Private _upcomingGames As List(Of UpcomingMatch) = Nothing
     Private _liveGames As List(Of CricketMatch) = Nothing
@@ -49,7 +49,6 @@ Public Class GameSelectorPresenter
             String.Empty + vbCrLf +
             upcomingMatch.MatchNumber + vbCrLf +
             upcomingMatch.MatchLocation
-        'Console.WriteLine("ACTUAL = {0}", details)
         _view.DisplayUpcomingGameDetails(details)
     End Sub
 
@@ -58,7 +57,6 @@ Public Class GameSelectorPresenter
     End Function
 
     Private Sub DisplayVersionOnStartup()
-        Dim productVersion As String = SprSnippets.ProductCaption
         _view.SetFormCaption(SprSnippets.ProductCaption)
     End Sub
 

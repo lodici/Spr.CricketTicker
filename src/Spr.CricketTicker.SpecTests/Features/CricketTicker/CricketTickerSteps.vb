@@ -1,15 +1,13 @@
 ﻿Imports System
 Imports System.Collections.Generic
 Imports System.Linq
-Imports System.Text
+Imports Spr.YahooQueryLanguage.Cricket
 Imports TechTalk.SpecFlow
-Imports TechTalk.SpecFlow.Assist
 Imports NUnit.Framework
 Imports Rhino.Mocks
 '// In current version of RhinoMocks,  VB.NET has to fully qualify call to Expect.
 '// Reason: http://chrismay.org/CommentView,guid,09c435a9-897a-4800-a6cf-ad0e2cd2467c.aspx
 '// Can create a work around using the following import alias...
-Imports DoExpect = Rhino.Mocks.Expect
 
 Imports Spr.CricketTicker.Library
 Imports Spr.CricketTicker.SampleFeeds
@@ -52,7 +50,7 @@ Namespace Spr.CricketTicker.SpecTests
         <TechTalk.SpecFlow.When("the ticker is updated")> _
         Public Sub WhenTheTickerIsUpdated()
             _view = MockRepository.GenerateStub(Of ICricketTickerView)()
-            Dim service As ICricketService = New YahooQueryLanguage.CricketService(_feedProvider)
+            Dim service As ICricketService = New CricketService(_feedProvider)
             _presenter = New CricketTickerPresenter(_view, service, _gameId)
             _presenter.UpdateTicker()
         End Sub
