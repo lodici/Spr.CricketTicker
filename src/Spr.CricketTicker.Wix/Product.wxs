@@ -146,6 +146,7 @@
 		
 		<WixVariable Id="WixUIBannerBmp" Value="Bitmaps\bannrbmp.bmp" />
 		<WixVariable Id="WixUIDialogBmp" Value="Bitmaps\WixUIDialogBmp.bmp" />
+		<WixVariable Id="WixUILicenseRtf" Value="..\..\licenses\GPLv3.rtf" />
 		
 		<!-- Activate GUI Wizard. Welcome, License and install location pages.
 			 Requires reference to WixUIExtension.dll -->

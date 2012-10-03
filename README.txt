@@ -8,7 +8,7 @@ I wrote this because I wanted a simple way of keeping track of the cricket score
 
 
 USER INSTRUCTIONS
----------------------------------
+=================
 When started, SPR Cricket Ticker displays a list of active and upcoming international cricket matches.
 Double-clicking an entry in the list will either -
   - create a ticker if the selected game is active
@@ -24,18 +24,24 @@ Should an unexpected error occur then the ticker will display a suitable message
 
 
 DEVELOPMENT
------------
-!TO DO!
+===========
+!TODO!
 
 
 FEEDBACK
---------
+========
 Please submit feedback via
 - https://sourceforge.net/p/sprcrickettickr/discussion/
 
 or raise an issue, feature request, etc. at either of:
 - https://sourceforge.net/p/sprcrickettickr/tickets/
 - https://github.com/spr117/Spr.CricketTicker/issues
+
+
+LICENSES
+========
+SPR Cricket Ticker is distributed under the GNU General Public License, version 3.
+Apache log4net is distributed under the Apache License, version 2.0.
 
 -------------------------------------------
 Copyright (c) 2012 Steve Roberts
