@@ -4,7 +4,7 @@ SPR Cricket Ticker
 
 ABOUT
 =====
-I wrote this because I wanted a simple way of keeping tracking of the cricket score when England were playing without having to flick back and forth between my browser and whatever I was currently working on. The result is a simple, unobtrusive ticker which takes up very little screen real estate.
+I wrote this because I wanted a simple way of keeping track of the cricket score without having to flick back and forth between my browser and whatever I was currently working on. The result is a simple, unobtrusive ticker which takes up very little screen real estate.
 
 
 USER INSTRUCTIONS
