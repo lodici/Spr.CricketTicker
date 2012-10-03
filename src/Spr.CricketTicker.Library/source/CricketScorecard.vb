@@ -7,9 +7,6 @@
         Twenty20 = 3
     End Enum
 
-    Private _battingTeamRunsScored(2) As Integer
-    Private _bowlingTeamRunsScored(2) As Integer
-
     Public Property BattingTeam As CricketTeamStats
     Public Property BowlingTeam As CricketTeamStats
 

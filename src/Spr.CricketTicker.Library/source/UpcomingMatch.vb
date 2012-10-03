@@ -6,5 +6,4 @@
     Public Property SeriesSubTitle As String
     Public Property MatchNumber As String
     Public Property MatchLocation As String
-    Public Property MatchId As String
 End Class

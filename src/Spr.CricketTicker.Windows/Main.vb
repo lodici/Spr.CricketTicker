@@ -1,5 +1,6 @@
-﻿Imports Spr.CricketTicker.Library
-Imports Spr.CricketTicker.SampleFeeds
+﻿Imports Spr.CricketTicker.Windows.Forms
+Imports Spr.YahooQueryLanguage.Cricket
+Imports Spr.CricketTicker.Library
 
 Module Main
 
@@ -11,7 +12,7 @@ Module Main
         Dim service As ICricketService = GetCricketService()
         Dim gameSelector = New GameSelector(service)
         If gameSelector.ShowDialog = DialogResult.OK Then
-            Dim frm = New CricketTicker(service, gameSelector.SelectedGameId)
+            Dim frm = New Forms.CricketTicker(service, gameSelector.SelectedGameId)
             Application.Run(frm)
         End If
 
@@ -19,9 +20,9 @@ Module Main
 
     Private Function GetCricketService() As ICricketService
 #If USE_SAMPLE_FEED Then
-        Return New Spr.YahooQueryLanguage.CricketService(New SampleFeed)
+        Return New CricketService(New Spr.CricketTicker.SampleFeeds.SampleFeed)
 #Else
-        Return New Spr.YahooQueryLanguage.CricketService()
+        Return New CricketService()
 #End If
     End Function
 

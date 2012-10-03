@@ -7,7 +7,7 @@ Module SprSnippets
         Return My.Application.Info.ProductName + " " + GetAssemblyVersion()
     End Function
 
-    Public Function GetAssemblyVersion() As String
+    Private Function GetAssemblyVersion() As String
         Dim assemblyVersion As Version
         If Assembly.GetEntryAssembly Is Nothing Then
             assemblyVersion = Assembly.GetExecutingAssembly.GetName.Version
@@ -30,7 +30,7 @@ Module SprSnippets
         Return Debugger.IsAttached
     End Function
 
-    Public Function IsDebugBuild() As Boolean
+    Private Function IsDebugBuild() As Boolean
 #If DEBUG Then
         Return True
 #Else

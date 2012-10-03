@@ -1,70 +1,74 @@
 ﻿Imports Spr.CricketTicker.Library
 
-Public Class GameSelector
-    Implements IGameSelectorView
+Namespace Forms
 
-    Private _presenter As GameSelectorPresenter
-    Private _service As ICricketService
+    Public Class GameSelector
+        Implements IGameSelectorView
 
-    Public Sub New(service As ICricketService)
-        ' This call is required by the designer.
-        InitializeComponent()
-        ' Add any initialization after the InitializeComponent() call.
-        _service = service
-    End Sub
+        Private _presenter As GameSelectorPresenter
+        Private ReadOnly _service As ICricketService
 
-    Friend ReadOnly Property SelectedGameId As String
-        Get
-            Return _presenter.SelectedGameId
-        End Get
-    End Property
+        Public Sub New(service As ICricketService)
+            ' This call is required by the designer.
+            InitializeComponent()
+            ' Add any initialization after the InitializeComponent() call.
+            _service = service
+        End Sub
 
-    Private Sub SelectGameDialog_Load(sender As Object, e As System.EventArgs) Handles Me.Load
-        ListView1.Items.Clear()
-    End Sub
+        Friend ReadOnly Property SelectedGameId As String
+            Get
+                Return _presenter.SelectedGameId
+            End Get
+        End Property
 
-    Private Sub ListView1_DoubleClick(sender As Object, e As System.EventArgs) Handles ListView1.DoubleClick
-        If IsGameSelected() Then
-            _presenter.ItemDoubleClicked(GetSelectedGameId())
-        End If
-    End Sub
+        Private Sub SelectGameDialog_Load(sender As Object, e As EventArgs) Handles Me.Load
+            ListView1.Items.Clear()
+        End Sub
 
-    Private Function IsGameSelected() As Boolean
-        Return (ListView1.SelectedItems.Count = 1)
-    End Function
+        Private Sub ListView1_DoubleClick(sender As Object, e As EventArgs) Handles ListView1.DoubleClick
+            If IsGameSelected() Then
+                _presenter.ItemDoubleClicked(GetSelectedGameId())
+            End If
+        End Sub
 
-    Private Function GetSelectedGameId() As String
-        Return ListView1.SelectedItems(0).SubItems(2).Text
-    End Function
+        Private Function IsGameSelected() As Boolean
+            Return (ListView1.SelectedItems.Count = 1)
+        End Function
 
-    Private Sub SelectSeriesForm_Shown(sender As Object, e As System.EventArgs) Handles Me.Shown
-        PictureBox1.Refresh()
-        _presenter = New GameSelectorPresenter(Me, _service)
-        PictureBox1.Hide()
-    End Sub
+        Private Function GetSelectedGameId() As String
+            Return ListView1.SelectedItems(0).SubItems(2).Text
+        End Function
 
-    Public Sub SetFormCaption(caption As String) Implements Library.IGameSelectorView.SetFormCaption
-        Me.Text = caption
+        Private Sub SelectSeriesForm_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+            PictureBox1.Refresh()
+            _presenter = New GameSelectorPresenter(Me, _service)
+            PictureBox1.Hide()
+        End Sub
+
+        Public Sub SetFormCaption(caption As String) Implements IGameSelectorView.SetFormCaption
+            Text = caption
 #If USE_SAMPLE_FEED Then
-        Me.Text += " ## SAMPLE FEED ##"
+            Me.Text += " ## SAMPLE FEED ##"
 #End If
-    End Sub
+        End Sub
 
-    Public Sub DisplayUpcomingGameDetails(details As String) Implements Library.IGameSelectorView.DisplayUpcomingGameDetails
-        MessageBox.Show(details, "Game Details", MessageBoxButtons.OK, MessageBoxIcon.Information)
-    End Sub
-    
-    Public Sub AddSelectorItem(gameId As String, gameCaption As String, gameStatus As String) Implements Library.IGameSelectorView.AddSelectorItem
-        Dim lvRow(3) As String
-        lvRow(0) = gameCaption
-        lvRow(1) = gameStatus
-        lvRow(2) = gameId
-        ListView1.Items.Add(New ListViewItem(lvRow))
-    End Sub
+        Public Sub DisplayUpcomingGameDetails(details As String) Implements IGameSelectorView.DisplayUpcomingGameDetails
+            MessageBox.Show(details, "Game Details", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Sub
 
-    Public Sub CloseView() Implements Library.IGameSelectorView.CloseView
-        Me.DialogResult = System.Windows.Forms.DialogResult.OK
-        Me.Close()
-    End Sub
+        Public Sub AddSelectorItem(gameId As String, gameCaption As String, gameStatus As String) Implements IGameSelectorView.AddSelectorItem
+            Dim lvRow(3) As String
+            lvRow(0) = gameCaption
+            lvRow(1) = gameStatus
+            lvRow(2) = gameId
+            ListView1.Items.Add(New ListViewItem(lvRow))
+        End Sub
 
-End Class
+        Public Sub CloseView() Implements IGameSelectorView.CloseView
+            DialogResult = DialogResult.OK
+            Close()
+        End Sub
+
+    End Class
+
+End Namespace
