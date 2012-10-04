@@ -11,6 +11,7 @@
 *.sln.docstates
 SprNotes.txt
 logs/
+Dragon.lnk
 
 # Build results
 [Dd]ebug/
