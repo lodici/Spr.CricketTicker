@@ -17,11 +17,12 @@ Module SprSnippets
         Dim versionString As New StringBuilder
         versionString _
             .Append(assemblyVersion.Major).Append(".") _
-            .Append(assemblyVersion.Minor).Append(".") _
-            .Append(assemblyVersion.Build)
+            .Append(assemblyVersion.Minor)
         If IsDebugBuild() Then
-            '// Revision is irrelevant in a Release build.
-            versionString.Append(".").Append(assemblyVersion.Revision)
+            '// Do not show Build & Revision in a Release build.
+            versionString _
+                .Append(".").Append(assemblyVersion.Build) _
+                .Append(".").Append(assemblyVersion.Revision)
         End If
         Return versionString.ToString()
     End Function
