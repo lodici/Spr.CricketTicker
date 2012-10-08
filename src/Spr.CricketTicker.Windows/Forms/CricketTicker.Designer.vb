@@ -28,29 +28,30 @@
             Me.TextBox1 = New System.Windows.Forms.TextBox()
             Me.Button1 = New System.Windows.Forms.Button()
             Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+            Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
             Me.SuspendLayout()
             '
             'Label1
             '
             Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.Label1.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label1.Font = New System.Drawing.Font("Courier New", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label1.Location = New System.Drawing.Point(0, 0)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(272, 18)
+            Me.Label1.Size = New System.Drawing.Size(312, 18)
             Me.Label1.TabIndex = 0
-            Me.Label1.Text = "Label1"
+            Me.Label1.Text = "TTT1:000 TTT2:000/00 OV:00.0 RR:00.0/00.0"
             Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
             '
             'TextBox1
             '
             Me.TextBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                                         Or System.Windows.Forms.AnchorStyles.Left) _
-                                        Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+                Or System.Windows.Forms.AnchorStyles.Left) _
+                Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
             Me.TextBox1.Location = New System.Drawing.Point(1, 43)
             Me.TextBox1.Multiline = True
             Me.TextBox1.Name = "TextBox1"
             Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both
-            Me.TextBox1.Size = New System.Drawing.Size(271, 0)
+            Me.TextBox1.Size = New System.Drawing.Size(311, 0)
             Me.TextBox1.TabIndex = 1
             '
             'Button1
@@ -58,10 +59,11 @@
             Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
             Me.Button1.BackColor = System.Drawing.SystemColors.ButtonFace
             Me.Button1.DialogResult = System.Windows.Forms.DialogResult.Cancel
-            Me.Button1.Location = New System.Drawing.Point(254, 0)
+            Me.Button1.Location = New System.Drawing.Point(294, 0)
             Me.Button1.Name = "Button1"
             Me.Button1.Size = New System.Drawing.Size(17, 18)
             Me.Button1.TabIndex = 2
+            Me.ToolTip1.SetToolTip(Me.Button1, "Close ticker")
             Me.Button1.UseVisualStyleBackColor = False
             '
             'Timer1
@@ -74,14 +76,14 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.CancelButton = Me.Button1
-            Me.ClientSize = New System.Drawing.Size(272, 18)
+            Me.ClientSize = New System.Drawing.Size(312, 18)
             Me.ControlBox = False
             Me.Controls.Add(Me.Button1)
             Me.Controls.Add(Me.TextBox1)
             Me.Controls.Add(Me.Label1)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
             Me.MaximizeBox = False
-            Me.MaximumSize = New System.Drawing.Size(272, 18)
+            Me.MaximumSize = New System.Drawing.Size(312, 18)
             Me.MinimizeBox = False
             Me.MinimumSize = New System.Drawing.Size(272, 18)
             Me.Name = "CricketTicker"
@@ -98,5 +100,6 @@
         Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
         Friend WithEvents Button1 As System.Windows.Forms.Button
         Friend WithEvents Timer1 As System.Windows.Forms.Timer
+        Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
     End Class
 End Namespace

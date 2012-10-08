@@ -75,9 +75,9 @@ Public Class CricketTickerPresenter
             If StrComp(.GameStatus, "play in progress", CompareMethod.Text) = 0 Then
                 ticker +=
                     " OV:" + .OversBowled.ToString("0.0") +
-                    " RR:" + .TeamBattingRunRate.ToString("0.00")
+                    " RR:" + .TeamBattingRunRate.ToString("0.0")
                 If .BowlingTeam.Runs(0) > 0 Then
-                    ticker += "/" + .TeamBattingRequiredRunRate.ToString("0.00")
+                    ticker += "/" + .TeamBattingRequiredRunRate.ToString("0.0")
                 End If
 
             Else
