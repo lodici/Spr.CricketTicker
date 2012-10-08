@@ -143,7 +143,7 @@ Me.ScenarioSetup(scenarioInfo)
  testRunner.When("the ticker is updated", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "When ")
 #End ExternalSource
 #ExternalSource("CricketTicker.feature",49)
- testRunner.Then("display ""PAK:0 AUS:47/0 OV:6.4 RR:7.05""", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Then ")
+ testRunner.Then("display ""PAK:0 AUS:47/0 OV:6.4 RR:7.1""", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Then ")
 #End ExternalSource
             Me.ScenarioCleanup
         End Sub
@@ -209,7 +209,7 @@ Me.ScenarioSetup(scenarioInfo)
  testRunner.When("the ticker is updated", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "When ")
 #End ExternalSource
 #ExternalSource("CricketTicker.feature",67)
- testRunner.Then("display ""PAK:198 AUS:21/1 OV:5.0 RR:4.20/3.95""", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Then ")
+ testRunner.Then("display ""PAK:198 AUS:21/1 OV:5.0 RR:4.2/4.0""", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Then ")
 #End ExternalSource
             Me.ScenarioCleanup
         End Sub
