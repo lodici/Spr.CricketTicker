@@ -33,14 +33,14 @@ SPR Cricket Ticker development environment, tools and techniques:
 - VB.NET. 
 - Visual Studio 2010.
 - Windows 7 (64-Bit).
-- Source control using _Git, GitFlow, GitHub_.
-- TDD with _SpecFlow, NUnit, RhinoMocks_.
-- Logging framework using _log4net_.
-- Windows Installer XML (_WiX_) toolset.
-- Nuget 'No-Commit' strategy, local server implementation.
+- Source control using _[Git](http://msysgit.github.com/), [GitFlow](https://github.com/oakwood/GitFlowGuide), [GitHub](https://github.com/spr117/Spr.CricketTicker)_.
+- TDD with _[SpecFlow](http://www.specflow.org/), [NUnit](http://www.nunit.org/), [Rhino Mocks](ayende.com/wiki/Rhino+Mocks.ashx)_.
+- Logging framework using _[log4net](http://logging.apache.org/log4net/)_.
+- Windows Installer XML (_[WiX](http://wixtoolset.org/)_) toolset.
+- [Nuget](http://nuget.org/), ['No-Commit' strategy](http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages), local server implementation.
 - MSBuild script for Continuous Integration server (TeamCity, Jenkins).
 - Model-View-Presenter (MVP) interface design.
-- Manipulating Yahoo Query Language (YQL) results using LINQ.
+- Manipulating Yahoo Query Language ([YQL](http://developer.yahoo.com/yql/guide/index.html)) results using LINQ.
 
 
 ## Feedback ##
