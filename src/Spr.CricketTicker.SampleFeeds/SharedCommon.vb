@@ -15,6 +15,7 @@ Public Class SharedCommon
         UpcomingFourOdiOneTest
         UpcomingIncludingThreeWorldCup
         MissingSubSeries
+        BigScoreDoesNotFit
     End Enum
 
     Public Shared Function GetEmbeddedSampleXmlDocument(resourceId As String) As XmlDocument
@@ -54,6 +55,8 @@ Public Class SharedCommon
                 Return "UpcomingIncludingThreeWorldCup"
             Case XmlFeeds.MissingSubSeries
                 Return "MissingSubSeries"
+            Case XmlFeeds.BigScoreDoesNotFit
+                Return "BigScoreDoesNotFitInTicker"
             Case Else
                 Throw New IndexOutOfRangeException
         End Select

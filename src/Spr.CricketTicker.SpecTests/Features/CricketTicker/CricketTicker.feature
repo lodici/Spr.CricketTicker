@@ -46,7 +46,7 @@ Scenario: ODI display format in first innings
 	Given the sample feed "OneOdiFirstInnings"
 	And the game I want to monitor has an Id equal to "184303"
 	When the ticker is updated
-	Then display "PAK:0 AUS:47/0 OV:6.4 RR:7.05"
+	Then display "PAK:0 AUS:47/0 OV:6.4 RR:7.1"
 
 Scenario: ODI display format in first innings and rain stoppage
 	Given the sample feed "OneOdiOneTest"
@@ -64,7 +64,7 @@ Scenario: ODI display format in second innings and play in progress
 	Given the sample feed "TwoOdi"
 	And the game I want to monitor has an Id equal to "184298"
 	When the ticker is updated
-	Then display "PAK:198 AUS:21/1 OV:5.0 RR:4.20/3.95"
+	Then display "PAK:198 AUS:21/1 OV:5.0 RR:4.2/4.0"
 
 Scenario: Test Match display format
 	Given the sample feed "OneTestSecondInningsStumps"
