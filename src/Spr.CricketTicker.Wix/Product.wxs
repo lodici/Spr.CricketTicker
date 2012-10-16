@@ -4,18 +4,10 @@
 		
 	<?define ProductName = "SPR Cricket Ticker" ?>
 	<?define ProductCompany = "SPR Software" ?>
-	<?define ProductExe = "Spr.CricketTicker.exe" ?>
+	<?define ProductExe = "Spr.CricketTicker.exe" ?>	
 	
-	<?ifdef env.MAJOR_VERSION ?>
-		<?define MajorVersion = "$(env.MAJOR_VERSION)" ?>
-	<?else?>
-		<?define MajorVersion = "1" ?>
-	<?endif?>
-	<?ifdef env.MINOR_VERSION ?>
-		<?define MinorVersion = "$(env.MINOR_VERSION)" ?>
-	<?else?>
-		<?define MinorVersion = "0" ?>
-	<?endif?>		
+	<?define MajorVersion = "1" ?>
+	<?define MinorVersion = "2" ?>
 	<?ifdef env.BUILD_NUMBER ?>
 		<?define BuildNumber = "$(env.BUILD_NUMBER)" ?>
 	<?else?>
@@ -25,7 +17,7 @@
 	<Product Id="*"
 		 UpgradeCode="7CCFD736-2E61-4A4B-80CB-0FDEA513676C"
 		 Name="$(var.ProductName)"
-		 Version="$(var.MajorVersion).$(var.MinorVersion).$(var.BuildNumber).0"
+		 Version="$(var.MajorVersion).$(var.MinorVersion).$(var.BuildNumber)"
 		 Language="1033"
 		 Manufacturer="SPR">
 		
