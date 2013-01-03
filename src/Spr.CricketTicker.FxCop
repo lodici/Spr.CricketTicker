@@ -1,0 +1,605 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FxCopProject Version="10.0" Name="My FxCop Project">
+ <ProjectOptions>
+  <SharedProject>True</SharedProject>
+  <Stylesheet Apply="False">$(FxCopDir)\Xml\FxCopReport.xsl</Stylesheet>
+  <SaveMessages>
+   <Project Status="Active, Excluded, Good, Noise" NewOnly="False" />
+   <Report Status="Active, Good, Noise" NewOnly="False" />
+  </SaveMessages>
+  <ProjectFile Compress="True" DefaultTargetCheck="True" DefaultRuleCheck="True" SaveByRuleGroup="" Deterministic="True" />
+  <EnableMultithreadedLoad>True</EnableMultithreadedLoad>
+  <EnableMultithreadedAnalysis>True</EnableMultithreadedAnalysis>
+  <SourceLookup>True</SourceLookup>
+  <AnalysisExceptionsThreshold>10</AnalysisExceptionsThreshold>
+  <RuleExceptionsThreshold>1</RuleExceptionsThreshold>
+  <Spelling Locale="en-US" />
+  <OverrideRuleVisibilities>False</OverrideRuleVisibilities>
+  <CustomDictionaries SearchFxCopDir="True" SearchUserProfile="True" SearchProjectDir="True" />
+  <SearchGlobalAssemblyCache>False</SearchGlobalAssemblyCache>
+  <DeadlockDetectionTimeout>120</DeadlockDetectionTimeout>
+  <IgnoreGeneratedCode>False</IgnoreGeneratedCode>
+ </ProjectOptions>
+ <Targets>
+  <AssemblyReferenceDirectories>
+   <Directory>$(ProjectDir)/bin/Debug/</Directory>
+  </AssemblyReferenceDirectories>
+  <Target Name="$(ProjectDir)/../bin/Debug/Spr.CricketTicker.exe" Analyze="True" AnalyzeAllChildren="True" />
+  <Target Name="$(ProjectDir)/../bin/Debug/Spr.CricketTicker.Library.dll" Analyze="True" AnalyzeAllChildren="True" />
+  <Target Name="$(ProjectDir)/../bin/Debug/Spr.Extensions.dll" Analyze="True" AnalyzeAllChildren="True" />
+  <Target Name="$(ProjectDir)/../bin/Debug/Spr.YahooQueryLanguage.dll" Analyze="True" AnalyzeAllChildren="True" />
+ </Targets>
+ <Rules>
+  <RuleFiles>
+   <RuleFile Name="$(FxCopDir)\Rules\DesignRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\GlobalizationRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\InteroperabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\MobilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\NamingRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PerformanceRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PortabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\SecurityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\SecurityTransparencyRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\UsageRules.dll" Enabled="True" AllRulesEnabled="True" />
+  </RuleFiles>
+  <Groups />
+  <Settings />
+ </Rules>
+ <FxCopReport Version="10.0">
+  <Namespaces>
+   <Namespace Name="Spr.CricketTicker.Library">
+    <Messages>
+     <Message Id="Spr" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2012-12-09 03:05:49Z">
+      <Issue Name="Namespace">
+       <Item>Spr</Item>
+       <Item>Spr.CricketTicker.Library</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="Spr.CricketTicker.Windows.Forms">
+    <Messages>
+     <Message Id="Spr" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2012-12-09 03:05:49Z">
+      <Issue Name="Namespace">
+       <Item>Spr</Item>
+       <Item>Spr.CricketTicker.Windows.Forms</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="Spr.Extensions">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2012-12-09 03:05:49Z">
+      <Issue>
+       <Item>Spr.Extensions</Item>
+      </Issue>
+     </Message>
+     <Message Id="Spr" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2012-12-09 03:05:49Z">
+      <Issue Name="Namespace">
+       <Item>Spr</Item>
+       <Item>Spr.Extensions</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="Spr.YahooQueryLanguage.Cricket">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2012-12-09 03:05:49Z">
+      <Issue>
+       <Item>Spr.YahooQueryLanguage.Cricket</Item>
+      </Issue>
+     </Message>
+     <Message Id="Spr" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2012-12-09 03:05:49Z">
+      <Issue Name="Namespace">
+       <Item>Spr</Item>
+       <Item>Spr.YahooQueryLanguage.Cricket</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+  </Namespaces>
+  <Targets>
+   <Target Name="$(ProjectDir)/../bin/Debug/Spr.CricketTicker.exe">
+    <Modules>
+     <Module Name="spr.cricketticker.exe">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2012-12-09 03:05:49Z">
+        <Issue Name="NoStrongName">
+         <Item>'Spr.CricketTicker.exe'</Item>
+        </Issue>
+       </Message>
+       <Message Id="Spr" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2012-12-09 03:05:49Z">
+        <Issue Name="Assembly">
+         <Item>Spr</Item>
+         <Item>'Spr.CricketTicker.exe'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Created="2012-12-09 03:05:49Z">
+        <Issue>
+         <Item>'Spr.CricketTicker.exe'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824" Created="2012-12-09 03:05:49Z">
+        <Issue>
+         <Item>'Spr.CricketTicker.exe'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="Spr.CricketTicker.Windows.Forms">
+        <Types>
+         <Type Name="CricketTicker">
+          <Messages>
+           <Message TypeName="TypeNamesShouldNotMatchNamespaces" Category="Microsoft.Naming" CheckId="CA1724" Created="2012-12-09 03:05:49Z">
+            <Issue>
+             <Item>'CricketTicker'</Item>
+             <Item>Spr.CricketTicker.Library</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="GameSelector">
+          <Members>
+           <Member Name="#DisplayUpcomingGameDetails(System.String)">
+            <Messages>
+             <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Created="2012-12-09 03:05:49Z">
+              <Issue>
+               <Item>'GameSelector.DisplayUpcomingGameDetails(String)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+   <Target Name="$(ProjectDir)/../bin/Debug/Spr.CricketTicker.Library.dll">
+    <Modules>
+     <Module Name="spr.cricketticker.library.dll">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2012-12-09 03:05:49Z">
+        <Issue Name="NoStrongName">
+         <Item>'Spr.CricketTicker.Library.dll'</Item>
+        </Issue>
+       </Message>
+       <Message Id="Spr" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2012-12-09 03:05:49Z">
+        <Issue Name="Assembly">
+         <Item>Spr</Item>
+         <Item>'Spr.CricketTicker.Library.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Created="2012-12-09 03:05:49Z">
+        <Issue>
+         <Item>'Spr.CricketTicker.Library.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824" Created="2012-12-09 03:05:49Z">
+        <Issue>
+         <Item>'Spr.CricketTicker.Library.dll'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="Spr.CricketTicker.Library">
+        <Types>
+         <Type Name="CricketTeamStats">
+          <Members>
+           <Member Name="#Runs">
+            <Messages>
+             <Message TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819" Created="2012-12-09 03:05:49Z">
+              <Issue>
+               <Item>'CricketTeamStats.Runs()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="CricketTickerPresenter">
+          <Members>
+           <Member Name="#UpdateTicker()">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2012-12-09 03:05:49Z">
+              <Issue>
+               <Item>'CricketTickerPresenter.UpdateTicker()'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="GameSelectorPresenter">
+          <Members>
+           <Member Name="#GetListOfLiveGames()">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2012-12-09 03:05:49Z">
+              <Issue>
+               <Item>'GameSelectorPresenter.GetListOfLiveGames()'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetListOfUpcomingGames(System.DateTime)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2012-12-09 03:05:49Z">
+              <Issue>
+               <Item>'GameSelectorPresenter.GetListOfUpcomingGames(Date)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetStartDateCaption(System.DateTime,System.DateTime)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2012-12-09 03:05:49Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'GameSelectorPresenter.GetStartDateCaption(Date, Date)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.DateTime.ToString(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2012-12-09 03:05:49Z">
+              <Issue Name="IFormatProviderAlternateString">
+               <Item>'Date.ToString(String)'</Item>
+               <Item>'GameSelectorPresenter.GetStartDateCaption(Date, Date)'</Item>
+               <Item>'Date.ToString(String, IFormatProvider)'</Item>
+               <Item>'CultureInfo.CurrentCulture()'</Item>
+               <Item>'CultureInfo.InvariantCulture()'</Item>
+              </Issue>
+              <Issue Name="IFormatProviderAlternateString">
+               <Item>'Date.ToString(String)'</Item>
+               <Item>'GameSelectorPresenter.GetStartDateCaption(Date, Date)'</Item>
+               <Item>'Date.ToString(String, IFormatProvider)'</Item>
+               <Item>'CultureInfo.CurrentCulture()'</Item>
+               <Item>'CultureInfo.InvariantCulture()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ICricketService">
+          <Members>
+           <Member Name="#GetListOfLiveGames()">
+            <Messages>
+             <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Created="2012-12-09 03:05:49Z">
+              <Issue>
+               <Item>'List(Of CricketMatch)'</Item>
+               <Item>'ICricketService.GetListOfLiveGames()'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2012-12-09 03:05:49Z">
+              <Issue Certainty="50">
+               <Item>'ICricketService.GetListOfLiveGames()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetListOfUpcomingMatches(System.DateTime)">
+            <Messages>
+             <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Created="2012-12-09 03:05:49Z">
+              <Issue>
+               <Item>'List(Of CricketMatch)'</Item>
+               <Item>'ICricketService.GetListOfUpcomingMatches(Date)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="IFeedProvider">
+          <Members>
+           <Member Name="#GetLiveGamesAsXml()">
+            <Messages>
+             <Message Id="System.Xml.XmlNode" TypeName="MembersShouldNotExposeCertainConcreteTypes" Category="Microsoft.Design" CheckId="CA1059" Created="2012-12-09 03:05:49Z">
+              <Issue Name="Xml">
+               <Item>'IFeedProvider.GetLiveGamesAsXml()'</Item>
+               <Item>'XmlDocument'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2012-12-09 03:05:49Z">
+              <Issue Certainty="50">
+               <Item>'IFeedProvider.GetLiveGamesAsXml()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetUpcomingGamesAsXml()">
+            <Messages>
+             <Message Id="System.Xml.XmlNode" TypeName="MembersShouldNotExposeCertainConcreteTypes" Category="Microsoft.Design" CheckId="CA1059" Created="2012-12-09 03:05:49Z">
+              <Issue Name="Xml">
+               <Item>'IFeedProvider.GetUpcomingGamesAsXml()'</Item>
+               <Item>'XmlDocument'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2012-12-09 03:05:49Z">
+              <Issue Certainty="50">
+               <Item>'IFeedProvider.GetUpcomingGamesAsXml()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="SprSnippets">
+          <Members>
+           <Member Name="#IsRunningInIde()">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2012-12-09 03:05:49Z">
+              <Issue>
+               <Item>'SprSnippets.IsRunningInIde()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+   <Target Name="$(ProjectDir)/../bin/Debug/Spr.Extensions.dll">
+    <Modules>
+     <Module Name="spr.extensions.dll">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2012-12-09 03:05:49Z">
+        <Issue Name="NoStrongName">
+         <Item>'Spr.Extensions.dll'</Item>
+        </Issue>
+       </Message>
+       <Message Id="Spr" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2012-12-09 03:05:49Z">
+        <Issue Name="Assembly">
+         <Item>Spr</Item>
+         <Item>'Spr.Extensions.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Created="2012-12-09 03:05:49Z">
+        <Issue>
+         <Item>'Spr.Extensions.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824" Created="2012-12-09 03:05:49Z">
+        <Issue>
+         <Item>'Spr.Extensions.dll'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="Spr.Extensions">
+        <Types>
+         <Type Name="LinqXmlExtensions">
+          <Members>
+           <Member Name="#ToXDocument(System.Xml.XmlDocument)">
+            <Messages>
+             <Message Id="System.Xml.XmlNode" TypeName="MembersShouldNotExposeCertainConcreteTypes" Category="Microsoft.Design" CheckId="CA1059" Created="2012-12-09 03:05:49Z">
+              <Issue Name="Xml">
+               <Item>'LinqXmlExtensions.ToXDocument(XmlDocument)'</Item>
+               <Item>'XmlDocument'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ToXmlDocument(System.Xml.Linq.XDocument)">
+            <Messages>
+             <Message TypeName="ConsiderPassingBaseTypesAsParameters" Category="Microsoft.Design" CheckId="CA1011" Created="2012-12-09 03:05:49Z">
+              <Issue>
+               <Item>'xDoc'</Item>
+               <Item>'LinqXmlExtensions.ToXmlDocument(XDocument)'</Item>
+               <Item>'XDocument'</Item>
+               <Item>'XNode'</Item>
+              </Issue>
+             </Message>
+             <Message Id="x" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2012-12-09 03:05:49Z">
+              <Issue Name="MemberParameter">
+               <Item>'LinqXmlExtensions.ToXmlDocument(XDocument)'</Item>
+               <Item>x</Item>
+               <Item>'xDoc'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.Xml.XmlNode" TypeName="MembersShouldNotExposeCertainConcreteTypes" Category="Microsoft.Design" CheckId="CA1059" Created="2012-12-09 03:05:49Z">
+              <Issue Name="Xml">
+               <Item>'LinqXmlExtensions.ToXmlDocument(XDocument)'</Item>
+               <Item>'XmlDocument'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+   <Target Name="$(ProjectDir)/../bin/Debug/Spr.YahooQueryLanguage.dll">
+    <Modules>
+     <Module Name="spr.yahooquerylanguage.dll">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2012-12-09 03:05:49Z">
+        <Issue Name="NoStrongName">
+         <Item>'Spr.YahooQueryLanguage.dll'</Item>
+        </Issue>
+       </Message>
+       <Message Id="Spr" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2012-12-09 03:05:49Z">
+        <Issue Name="Assembly">
+         <Item>Spr</Item>
+         <Item>'Spr.YahooQueryLanguage.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Created="2012-12-09 03:05:49Z">
+        <Issue>
+         <Item>'Spr.YahooQueryLanguage.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824" Created="2012-12-09 03:05:49Z">
+        <Issue>
+         <Item>'Spr.YahooQueryLanguage.dll'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="Spr.YahooQueryLanguage.Cricket">
+        <Types>
+         <Type Name="CricketFeeds">
+          <Members>
+           <Member Name="#GetXmlDocumentFromUri(System.String)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2012-12-09 03:05:49Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'CricketFeeds.GetXmlDocumentFromUri(String)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="CricketService">
+          <Members>
+           <Member Name="#GetListOfLiveGames()">
+            <Messages>
+             <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Created="2012-12-09 03:05:49Z">
+              <Issue>
+               <Item>'List(Of CricketMatch)'</Item>
+               <Item>'CricketService.GetListOfLiveGames()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetListOfUpcomingMatches(System.DateTime)">
+            <Messages>
+             <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Created="2012-12-09 03:05:49Z">
+              <Issue>
+               <Item>'List(Of CricketMatch)'</Item>
+               <Item>'CricketService.GetListOfUpcomingMatches(Date)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ScorecardParser">
+          <Members>
+           <Member Name="#ExtractBattingTeamRequiredRate()">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2012-12-09 03:05:49Z">
+              <Issue>
+               <Item>'ScorecardParser.ExtractBattingTeamRequiredRate()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ExtractBattingTeamRunRate()">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2012-12-09 03:05:49Z">
+              <Issue>
+               <Item>'ScorecardParser.ExtractBattingTeamRunRate()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetBowlingTeamInningsScoresFromXml()">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2012-12-09 03:05:49Z">
+              <Issue>
+               <Item>'ScorecardParser.GetBowlingTeamInningsScoresFromXml()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetOversBowledFromXml()">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2012-12-09 03:05:49Z">
+              <Issue>
+               <Item>'ScorecardParser.GetOversBowledFromXml()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetRunsScoredFromXml()">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2012-12-09 03:05:49Z">
+              <Issue>
+               <Item>'ScorecardParser.GetRunsScoredFromXml()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetWicketsLostFromXml()">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2012-12-09 03:05:49Z">
+              <Issue>
+               <Item>'ScorecardParser.GetWicketsLostFromXml()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+  </Targets>
+  <Rules>
+   <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+    <Resolution Name="NoStrongName">Sign {0} with a strong name key.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020">
+    <Resolution Name="Default">Consider merging the types defined in '{0}' with another namespace.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811">
+    <Resolution Name="Default">{0} appears to have no upstream public or protected callers.</Resolution>
+   </Rule>
+   <Rule TypeName="ConsiderPassingBaseTypesAsParameters" Category="Microsoft.Design" CheckId="CA1011">
+    <Resolution Name="Default">Consider changing the type of parameter {0} in {1} from {2} to its base type {3}. This method appears to only require base class members in its implementation. Suppress this violation if there is a compelling reason to require the more derived type in the method signature.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031">
+    <Resolution Name="Default">Modify {0} to catch a more specific exception than {1} or rethrow the exception.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002">
+    <Resolution Name="Default">Change {0} in {1} to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704">
+    <Resolution Name="Assembly">Correct the spelling of '{0}' in assembly name {1}.</Resolution>
+    <Resolution Name="MemberParameter">In method {0}, correct the spelling of '{1}' in parameter name {2} or remove it entirely if it represents any sort of Hungarian notation.</Resolution>
+    <Resolution Name="Namespace">Correct the spelling of '{0}' in namespace name '{1}'.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014">
+    <Resolution Name="Default">Mark {0} with CLSCompliant(true) because it exposes externally visible types.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824">
+    <Resolution Name="Default">Because assembly {0} contains a ResX-based resource file, mark it with the NeutralResourcesLanguage attribute, specifying the language of the resources within the assembly. This could improve lookup performance the first time a resource is retrieved.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822">
+    <Resolution Name="Default">The 'this' parameter (or 'Me' in Visual Basic) of {0} is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Resolution>
+   </Rule>
+   <Rule TypeName="MembersShouldNotExposeCertainConcreteTypes" Category="Microsoft.Design" CheckId="CA1059">
+    <Resolution Name="Xml">Modify member {0} so that it no longer exposes the concrete type {1}. Use IXPathNavigable to represent XML data sources.</Resolution>
+   </Rule>
+   <Rule TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819">
+    <Resolution Name="Default">Change {0} to return a collection or make it a method.</Resolution>
+   </Rule>
+   <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+    <Resolution Name="IFormatProviderAlternateString">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify {3} as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify {4}.</Resolution>
+   </Rule>
+   <Rule TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300">
+    <Resolution Name="Default">Change {0} to call the MessageBox.Show overload that specifies MessageBoxOptions, and make sure to set MessageBoxOptions.RightAlign and MessageBoxOptions.RtlReading if RightToLeft is set to RightToLeft.Yes on the parent control.</Resolution>
+   </Rule>
+   <Rule TypeName="TypeNamesShouldNotMatchNamespaces" Category="Microsoft.Naming" CheckId="CA1724">
+    <Resolution Name="Default">The type name {0} conflicts in whole or in part with the namespace name '{1}'. Change either name to eliminate the conflict.</Resolution>
+   </Rule>
+   <Rule TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024">
+    <Resolution Name="Default">Change {0} to a property if appropriate.</Resolution>
+   </Rule>
+  </Rules>
+ </FxCopReport>
+</FxCopProject>
