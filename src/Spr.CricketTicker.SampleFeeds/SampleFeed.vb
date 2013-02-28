@@ -1,6 +1,6 @@
 ﻿Imports System.Xml
 Imports Spr.CricketTicker.Library
-Imports Spr.Extensions.LinqXmlExtensions
+Imports Spr.Library.Extensions.LinqXml
 
 Public Class SampleFeed
     Implements IFeedProvider

@@ -116,13 +116,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Spr.Library.Extensions\Spr.Library.Extensions.vbproj">
+      <Project>{38E4D073-B105-4DF8-835E-68C8F3E4C672}</Project>
+      <Name>Spr.Library.Extensions</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Spr.CricketTicker.Library\Spr.CricketTicker.Library.vbproj">
       <Project>{14766290-2962-4DF8-A25A-67C3B53EAC5F}</Project>
       <Name>Spr.CricketTicker.Library</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Spr.Extensions\Spr.Extensions.vbproj">
-      <Project>{1EA707F0-07E7-4F0E-A7F4-FBA22FB9B864}</Project>
-      <Name>Spr.Extensions</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

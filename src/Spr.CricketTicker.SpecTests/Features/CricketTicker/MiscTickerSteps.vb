@@ -1,7 +1,6 @@
 ﻿Imports System
 Imports System.Collections.Generic
 Imports System.Linq
-Imports Spr.YahooQueryLanguage.Cricket
 Imports TechTalk.SpecFlow
 Imports NUnit.Framework
 Imports Rhino.Mocks
@@ -9,9 +8,10 @@ Imports Rhino.Mocks
 '// Reason: http://chrismay.org/CommentView,guid,09c435a9-897a-4800-a6cf-ad0e2cd2467c.aspx
 '// Can create a work around using the following import alias...
 
+Imports Spr.YahooQueryLanguage.Cricket
 Imports Spr.CricketTicker.Library
 Imports Spr.CricketTicker.SampleFeeds
-Imports Spr.Extensions
+Imports Spr.Library.Extensions.String
 Imports System.Xml
 
 Namespace Spr.CricketTicker.SpecTests
