@@ -34,4 +34,5 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyVersion("1.2.0.*")> 
 <Assembly: AssemblyFileVersion("1.2.0.0")> 
 
+'// Link log4net to app.config and watch for changes.
 <Assembly: log4net.Config.XmlConfigurator(Watch:=True)> 

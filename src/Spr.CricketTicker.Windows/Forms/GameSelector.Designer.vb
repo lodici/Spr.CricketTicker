@@ -79,7 +79,7 @@
             Me.PictureBox1.TabIndex = 1
             Me.PictureBox1.TabStop = False
             '
-            'SelectGameDialog
+            'GameSelector
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -90,7 +90,7 @@
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.MaximizeBox = False
             Me.MinimizeBox = False
-            Me.Name = "SelectGameDialog"
+            Me.Name = "GameSelector"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
             CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)

@@ -5,7 +5,7 @@ Imports Spr.Extensions.LinqXmlExtensions
 Public Class SampleFeed
     Implements IFeedProvider
 
-    Private Const _ACTIVE_FEED As SharedCommon.XmlFeeds = SharedCommon.XmlFeeds.OneOdiFirstInnings
+    Private Const _ACTIVE_FEED As SharedCommon.XmlFeeds = SharedCommon.XmlFeeds.TwoOdi
     Private Const _UPCOMING_FEED As SharedCommon.XmlFeeds = SharedCommon.XmlFeeds.UpcomingFourOdiOneTest
     Private Const _SIMULATED_DELAY = 2000 'millisecs
 
