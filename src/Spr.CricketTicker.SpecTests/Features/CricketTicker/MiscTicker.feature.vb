@@ -58,25 +58,6 @@ Namespace Spr.CricketTicker.SpecTests.Features.CricketTicker
         End Sub
         
         <NUnit.Framework.TestAttribute(),  _
-         NUnit.Framework.DescriptionAttribute("Feed throws runtime exception")>  _
-        Public Overridable Sub FeedThrowsRuntimeException()
-            Dim scenarioInfo As TechTalk.SpecFlow.ScenarioInfo = New TechTalk.SpecFlow.ScenarioInfo("Feed throws runtime exception", CType(Nothing,String()))
-#ExternalSource("MiscTicker.feature",6)
-Me.ScenarioSetup(scenarioInfo)
-#End ExternalSource
-#ExternalSource("MiscTicker.feature",7)
- testRunner.Given("an exception occurs when retrieving feed results", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Given ")
-#End ExternalSource
-#ExternalSource("MiscTicker.feature",8)
- testRunner.When("the ticker is updated", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "When ")
-#End ExternalSource
-#ExternalSource("MiscTicker.feature",9)
- testRunner.Then("display ""Unexpected Error! Restart Required.""", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Then ")
-#End ExternalSource
-            Me.ScenarioCleanup
-        End Sub
-        
-        <NUnit.Framework.TestAttribute(),  _
          NUnit.Framework.DescriptionAttribute("No live game")>  _
         Public Overridable Sub NoLiveGame()
             Dim scenarioInfo As TechTalk.SpecFlow.ScenarioInfo = New TechTalk.SpecFlow.ScenarioInfo("No live game", CType(Nothing,String()))

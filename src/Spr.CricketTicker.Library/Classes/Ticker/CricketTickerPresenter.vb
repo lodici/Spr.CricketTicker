@@ -36,10 +36,10 @@ Public Class CricketTickerPresenter
             _timer.Enabled = True
         Catch ex As Exception
             _errorCount += 1
-            _log.Error("Runtime Error", ex)
             If _errorCount <= 3 Then
                 _timer.Enabled = True
             Else
+                _log.Error("Runtime Error", ex)
                 _view.UpdateTicker("Unexpected Error! Restart Required.")
             End If
         End Try
