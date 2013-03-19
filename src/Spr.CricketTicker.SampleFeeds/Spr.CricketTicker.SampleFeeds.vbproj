@@ -46,6 +46,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Spr.Library.Extensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\Spr.Library.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -116,10 +119,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Spr.Library.Extensions\Spr.Library.Extensions.vbproj">
-      <Project>{38E4D073-B105-4DF8-835E-68C8F3E4C672}</Project>
-      <Name>Spr.Library.Extensions</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Spr.CricketTicker.Library\Spr.CricketTicker.Library.vbproj">
       <Project>{14766290-2962-4DF8-A25A-67C3B53EAC5F}</Project>
       <Name>Spr.CricketTicker.Library</Name>
