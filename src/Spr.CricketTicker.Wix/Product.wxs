@@ -88,11 +88,11 @@
 					  Source="..\..\bin\$(var.Configuration)\$(var.ProductExe).config"
 					  KeyPath="yes" />
 			</Component>			
-			<Component Id="COM_ExtensionsDll" Guid="B13901DA-3127-4BCF-B542-2E8061CEF0B9">
+			<Component Id="COM_ExtensionsDll" Guid="0E56C2C6-77CA-4CBE-B014-F333F49B4ED9">
 				<File Id="FILE_ExtensionsDll"
-					  Source="..\..\bin\$(var.Configuration)\Spr.Extensions.dll"
+					  Source="..\..\bin\$(var.Configuration)\Spr.Library.Extensions.dll"
 					  KeyPath="yes" />
-			</Component>
+			</Component>			
 			<Component Id="COM_YahooQueryLanguageDll" Guid="6E3F18B0-78D3-46FA-9BBF-7CB19726F181">
 				<File Id="FILE_YahooQueryLanguageDll"
 					  Source="..\..\bin\$(var.Configuration)\Spr.YahooQueryLanguage.dll"

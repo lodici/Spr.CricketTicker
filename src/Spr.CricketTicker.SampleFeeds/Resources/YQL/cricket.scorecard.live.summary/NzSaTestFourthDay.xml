@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<query xmlns:yahoo="http://www.yahooapis.com/v1/base.rng"
+	   yahoo:count="1"
+	   yahoo:created="2013-01-13T23:13:21Z"
+	   yahoo:lang="en-US">
+	<diagnostics>
+		<publiclyCallable>true</publiclyCallable>
+		<url execution-start-time="1"
+			 execution-stop-time="2"
+			 execution-time="1"><![CDATA[store://3vynIg3fvfgqWvJcDWyob0]]></url>
+		<url execution-start-time="3"
+			 execution-stop-time="544"
+			 execution-time="541"><![CDATA[http://cricketwebservice/ws/cwsapi/live/livematches.php?output=summary]]></url>
+		<user-time>545</user-time>
+		<service-time>542</service-time>
+		<build-version>32943</build-version>
+	</diagnostics>
+	<results>
+		<Scorecard>
+			<v>0</v>
+			<mid>108646</mid>
+			<m>1</m>
+			<series>
+				<series_id>11282</series_id>
+				<series_name>New Zealand in South Africa Test Series, 2 Test Cricket Series, 2013</series_name>
+			</series>
+			<place>
+				<vid>150</vid>
+				<stadium>St George&amp;#39;s Park, Port Elizabeth</stadium>
+				<city>Port Elizabeth</city>
+				<country>South Africa</country>
+				<Gimaget>http://l.yimg.com/qx/cricket/fufp/images/venue_150_thumb-12-7-2010-1ea4a2dfc3595c9832681fd92d6f1472.jpg</Gimaget>
+				<date>20130111080000</date>
+				<enddate>20130115150000</enddate>
+			</place>
+			<mn>2nd Test</mn>
+			<teams>
+				<i>7</i>
+				<fn>South Africa</fn>
+				<sn>SA</sn>
+				<logo>
+					<std>http://l.yimg.com/qx/cricket/fufp/images/south_africa-1-2-2011-386eeec8961d2c16d7254503f226e279.jpg</std>
+					<small>http://l.yimg.com/qx/cricket/fufp/images/south_africa_small-1-2-2011-53d3554a638cc4b114764c154ea164bd.jpg</small>
+				</logo>
+				<flag>
+					<std>http://l.yimg.com/qx/cricket/fufp/images/south_africa_flag-1-2-2011-d42076e888a05412fdfdf7504c4c6649.gif</std>
+					<small>http://l.yimg.com/qx/cricket/fufp/images/south_africa_flag_small-1-2-2011-52e6632a8c28d6b73e7e583692b58f16.gif</small>
+					<roundstd>http://l.yimg.com/qx/cricket/fufp/images/7-11-2-2012-4541e123431f83ef71ca72c9ba36a989.png</roundstd>
+					<roundsmall>http://l.yimg.com/qx/cricket/fufp/images/7_s-11-2-2012-d7641c072634340445b36f19996601ba.png</roundsmall>
+					<roundlarge>http://l.yimg.com/qx/cricket/fufp/images/7_l-11-2-2012-6ffcebebcba7787554927c94de0b3109.png</roundlarge>
+				</flag>
+			</teams>
+			<teams>
+				<i>5</i>
+				<fn>New Zealand</fn>
+				<sn>NZ</sn>
+				<logo>
+					<std>http://l.yimg.com/qx/cricket/fufp/images/new_zealand-1-2-2011-641e79167cbb81fff8e2548b97984347.jpg</std>
+					<small>http://l.yimg.com/qx/cricket/fufp/images/new_zealand_small-1-2-2011-f8b974801e957d2508fb87c01ea6e66b.jpg</small>
+				</logo>
+				<flag>
+					<std>http://l.yimg.com/qx/cricket/fufp/images/new_zealand_flag-1-2-2011-47faa19586061974b01c99058628d32e.gif</std>
+					<small>http://l.yimg.com/qx/cricket/fufp/images/new_zealand_flag_small-1-2-2011-648a3001043e4d94a5eebd9dfe9a88a5.gif</small>
+					<roundstd>http://l.yimg.com/qx/cricket/fufp/images/5-11-2-2012-36848dfcad81aae16dfc28cc1c506618.png</roundstd>
+					<roundsmall>http://l.yimg.com/qx/cricket/fufp/images/5_s-11-2-2012-a3e1d867528e59013ea81407d1fdfe02.png</roundsmall>
+					<roundlarge>http://l.yimg.com/qx/cricket/fufp/images/5_l-11-2-2012-78e43d8e16ee76e5f28da1a679de2eff.png</roundlarge>
+				</flag>
+			</teams>
+			<past_ings>
+				<s>
+					<t>1</t>
+					<i>3</i>
+					<ps>0</ps>
+					<stay_live>Yes</stay_live>
+					<pms>live</pms>
+					<dm>Day 3</dm>
+					<sn>3</sn>
+					<a>
+						<fo>1</fo>
+						<pp />
+						<i>5</i>
+						<cr>2.34</cr>
+						<r>157</r>
+						<o>67</o>
+						<w>4</w>
+						<b>0</b>
+						<lb>1</lb>
+						<wd>1</wd>
+						<nb>0</nb>
+						<pt>0</pt>
+						<l>0</l>
+						<tl>trails by 247</tl>
+						<cp>
+							<cp>73</cp>
+							<bls>164</bls>
+							<s>0</s>
+						</cp>
+					</a>
+					<lsn>
+						<sn>3</sn>
+						<r>93</r>
+						<w>2</w>
+						<rr>2.65</rr>
+					</lsn>
+					<tz>+02:00</tz>
+				</s>
+				<d>
+					<a>
+						<t>
+							<i>55772</i>
+							<a>2</a>
+							<c>Batting</c>
+							<dt />
+							<fd>0</fd>
+							<bd>0</bd>
+							<b>108</b>
+							<r>44</r>
+							<sr>40.740740740741</sr>
+							<four>8</four>
+							<six>0</six>
+							<name>Dean Brownlie</name>
+						</t>
+						<t>
+							<i>4966</i>
+							<a>3</a>
+							<c>Batting</c>
+							<dt />
+							<fd>0</fd>
+							<bd>0</bd>
+							<b>82</b>
+							<r>41</r>
+							<sr>50</sr>
+							<four>7</four>
+							<six>0</six>
+							<name>Bradley Watling</name>
+						</t>
+					</a>
+				</d>
+			</past_ings>
+			<past_ings>
+				<s>
+					<t>1</t>
+					<i>2</i>
+					<ps>0</ps>
+					<stay_live>Yes</stay_live>
+					<pms>live</pms>
+					<dm>Day 3</dm>
+					<sn>1</sn>
+					<a>
+						<fo>0</fo>
+						<pp />
+						<i>5</i>
+						<cr>2.7</cr>
+						<r>121</r>
+						<o>44.4</o>
+						<w>10</w>
+						<b>0</b>
+						<lb>5</lb>
+						<wd>1</wd>
+						<nb>0</nb>
+						<pt>0</pt>
+						<l>0</l>
+						<tl>trails by 404</tl>
+					</a>
+					<lsn>
+						<sn>1</sn>
+						<r>74</r>
+						<w>4</w>
+						<rr>3.58</rr>
+					</lsn>
+					<tz>+02:00</tz>
+				</s>
+			</past_ings>
+			<past_ings>
+				<s>
+					<t>1</t>
+					<i>1</i>
+					<ps>0</ps>
+					<stay_live>Yes</stay_live>
+					<pms>live</pms>
+					<dm>Day 2</dm>
+					<sn>3</sn>
+					<a>
+						<fo>0</fo>
+						<pp />
+						<i>7</i>
+						<cr>3.41</cr>
+						<r>525</r>
+						<o>153.5</o>
+						<w>8</w>
+						<b>6</b>
+						<lb>8</lb>
+						<wd>4</wd>
+						<nb>3</nb>
+						<pt>0</pt>
+						<l>1</l>
+					</a>
+					<lsn>
+						<sn>3</sn>
+						<r>20</r>
+						<w>1</w>
+						<rr>3.42</rr>
+					</lsn>
+					<tz>+02:00</tz>
+				</s>
+			</past_ings>
+			<toss>
+				<win>7</win>
+				<bat>1</bat>
+				<text>xxx-xxx-xxx</text>
+			</toss>
+			<result>0</result>
+			<ms>Stumps</ms>
+			<mt>1</mt>
+			<cts>1358118792</cts>
+		</Scorecard>
+	</results>
+</query>
+<!-- total: 545 -->
+<!-- engine2.yql.ac4.yahoo.com -->

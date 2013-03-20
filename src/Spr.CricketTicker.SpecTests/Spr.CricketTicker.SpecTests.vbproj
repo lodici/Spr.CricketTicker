@@ -55,6 +55,9 @@
     <Reference Include="Rhino.Mocks">
       <HintPath>..\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll</HintPath>
     </Reference>
+    <Reference Include="Spr.Library.Extensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\Spr.Library.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -73,12 +76,48 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Features\CricketTicker\CricketTicker.feature.vb">
+    <Compile Include="Features\CricketTicker\CricketMatchProperties.feature.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CricketTicker.feature</DependentUpon>
+      <DependentUpon>CricketMatchProperties.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\CricketTicker\CricketTickerSteps.vb" />
+    <Compile Include="Features\CricketTicker\CricketMatchPropertiesSteps.vb" />
+    <Compile Include="Features\CricketTicker\MiscTicker.feature.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MiscTicker.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\CricketTicker\MiscTickerSteps.vb" />
+    <Compile Include="Features\CricketTicker\OneDayMatchSummary.feature.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OneDayMatchSummary.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\CricketTicker\OneDayMatchTicker.feature.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OneDayMatchTicker.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\CricketTicker\OneDayMatchXmlParser.feature.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OneDayMatchXmlParser.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\CricketTicker\TestMatchSummary.feature.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestMatchSummary.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\CricketTicker\TestMatchTicker.feature.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestMatchTicker.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\CricketTicker\TestMatchXmlParser.feature.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestMatchXmlParser.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\GameSelector\GameSelector.feature.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -110,11 +149,38 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include=".docs\Cricket Web Service Short Guide.pdf" />
     <None Include="App.config" />
-    <None Include="Features\CricketTicker\CricketTicker.feature">
+    <None Include="Features\CricketTicker\CricketMatchProperties.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>CricketTicker.feature.vb</LastGenOutput>
+      <LastGenOutput>CricketMatchProperties.feature.vb</LastGenOutput>
+    </None>
+    <None Include="Features\CricketTicker\MiscTicker.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>MiscTicker.feature.vb</LastGenOutput>
+    </None>
+    <None Include="Features\CricketTicker\OneDayMatchSummary.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>OneDayMatchSummary.feature.vb</LastGenOutput>
+    </None>
+    <None Include="Features\CricketTicker\OneDayMatchTicker.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>OneDayMatchTicker.feature.vb</LastGenOutput>
+    </None>
+    <None Include="Features\CricketTicker\OneDayMatchXmlParser.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>OneDayMatchXmlParser.feature.vb</LastGenOutput>
+    </None>
+    <None Include="Features\CricketTicker\TestMatchSummary.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>TestMatchSummary.feature.vb</LastGenOutput>
+    </None>
+    <None Include="Features\CricketTicker\TestMatchTicker.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>TestMatchTicker.feature.vb</LastGenOutput>
+    </None>
+    <None Include="Features\CricketTicker\TestMatchXmlParser.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>TestMatchXmlParser.feature.vb</LastGenOutput>
     </None>
     <None Include="Features\GameSelector\GameSelector.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

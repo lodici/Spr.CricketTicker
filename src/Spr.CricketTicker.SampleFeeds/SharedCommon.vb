@@ -11,11 +11,13 @@ Public Class SharedCommon
         OneOdiOneTest
         OneTestSecondInningsStumps
         TwoOdi
+        NzSaTestFourthDay
         UpcomingFiveT20
         UpcomingFourOdiOneTest
         UpcomingIncludingThreeWorldCup
         MissingSubSeries
         BigScoreDoesNotFit
+        WomensOdi
     End Enum
 
     Public Shared Function GetEmbeddedSampleXmlDocument(resourceId As String) As XmlDocument
@@ -35,6 +37,8 @@ Public Class SharedCommon
 
     Private Shared Function GetResourceId(feedType As XmlFeeds) As String
         Select Case feedType
+            Case XmlFeeds.WomensOdi
+                Return "WomensOdi"
             Case XmlFeeds.NoGames
                 Return "NoGames"
             Case XmlFeeds.OneOdiFirstInnings
@@ -45,6 +49,8 @@ Public Class SharedCommon
                 Return "OneOdiOneTest"
             Case XmlFeeds.TwoOdi
                 Return "TwoOdi"
+            Case XmlFeeds.NzSaTestFourthDay
+                Return "NzSaTestFourthDay"
             Case XmlFeeds.UpcomingFourOdiOneTest
                 Return "UpcomingFourOdiOneTest"
             Case XmlFeeds.UpcomingFiveT20

@@ -1,5 +1,4 @@
 ﻿Public Interface ICricketTickerView
-    Sub SetTooltipText(details As String)
-    Sub DisplayScorecard(details As String)
     Sub UpdateTicker(caption As String)
+    Sub UpdateMatchSummary(details As String)
 End Interface

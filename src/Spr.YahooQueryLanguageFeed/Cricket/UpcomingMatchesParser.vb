@@ -1,5 +1,5 @@
 ﻿Imports System.Xml
-Imports Spr.Extensions
+Imports Spr.Library.Extensions.LinqXml
 Imports Spr.CricketTicker.Library
 
 Namespace Cricket

@@ -46,6 +46,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Spr.Library.Extensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\Spr.Library.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -120,10 +123,6 @@
       <Project>{14766290-2962-4DF8-A25A-67C3B53EAC5F}</Project>
       <Name>Spr.CricketTicker.Library</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Spr.Extensions\Spr.Extensions.vbproj">
-      <Project>{1EA707F0-07E7-4F0E-A7F4-FBA22FB9B864}</Project>
-      <Name>Spr.Extensions</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\YQL\cricket.scorecard.live.summary\OneOdiMatchEnded.xml" />
@@ -136,10 +135,13 @@
     <EmbeddedResource Include="Resources\YQL\cricket.upcoming_matches\UpcomingIncludingThreeWorldCup.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\YQL\cricket.scorecard.live.summary\MissingSubSeries.xml" />
+    <EmbeddedResource Include="Resources\YQL\cricket.scorecard.live.summary\BigScoreDoesNotFitInTicker.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\YQL\cricket.scorecard.live.summary\BigScoreDoesNotFitInTicker.xml" />
+    <EmbeddedResource Include="Resources\YQL\cricket.scorecard.live.summary\NzSaTestFourthDay.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\YQL\cricket.scorecard.live.summary\WomensOdi.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

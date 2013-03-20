@@ -51,6 +51,9 @@
     <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="Spr.Library.Extensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\Spr.Library.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -67,7 +70,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cricket\CricketService.vb" />
-    <Compile Include="Cricket\LiveMatchesParser.vb" />
     <Compile Include="Cricket\ParserHelper.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -86,7 +88,8 @@
     </Compile>
     <Compile Include="Cricket\UpcomingMatchesParser.vb" />
     <Compile Include="Cricket\CricketFeeds.vb" />
-    <Compile Include="Cricket\ScorecardParser.vb" />
+    <Compile Include="Cricket\ScorecardSummaryParser.vb" />
+    <Compile Include="Settings.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -98,6 +101,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Cricket Web Service Short Guide.pdf" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -113,10 +117,6 @@
     <ProjectReference Include="..\Spr.CricketTicker.Library\Spr.CricketTicker.Library.vbproj">
       <Project>{14766290-2962-4DF8-A25A-67C3B53EAC5F}</Project>
       <Name>Spr.CricketTicker.Library</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Spr.Extensions\Spr.Extensions.vbproj">
-      <Project>{1EA707F0-07E7-4F0E-A7F4-FBA22FB9B864}</Project>
-      <Name>Spr.Extensions</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<query xmlns:yahoo="http://www.yahooapis.com/v1/base.rng" yahoo:count="1" yahoo:created="2013-01-31T09:21:47Z" yahoo:lang="en-US">
+  <diagnostics>
+    <publiclyCallable>true</publiclyCallable>
+    <url execution-start-time="1" execution-stop-time="2" execution-time="1" proxy="DEFAULT"><![CDATA[store://3vynIg3fvfgqWvJcDWyob0]]></url>
+    <url execution-start-time="3" execution-stop-time="509" execution-time="506"><![CDATA[http://cricketwebservice/ws/cwsapi/live/livematches.php?output=summary]]></url>
+    <user-time>509</user-time>
+    <service-time>507</service-time>
+    <build-version>33614</build-version>
+  </diagnostics>
+  <results>
+    <Scorecard>
+      <v>0</v>
+      <mid>185549</mid>
+      <m>2</m>
+      <series>
+        <series_id>11395</series_id>
+        <series_name>ICC Womens World Cup, 2013</series_name>
+      </series>
+      <place>
+        <vid>20</vid>
+        <stadium>Brabourne Stadium, Mumbai</stadium>
+        <city>Mumbai</city>
+        <country>India</country>
+        <Gimaget>http://l.yimg.com/qx/cricket/fufp/images/venue_20_thumb-12-7-2010-6c055b6b468673c1db7168c007dea974.jpg</Gimaget>
+        <date>20130131090000</date>
+        <enddate>20130131170000</enddate>
+      </place>
+      <mn>Match 1</mn>
+      <teams>
+        <i>1126</i>
+        <fn>India Women</fn>
+        <sn>INDW</sn>
+        <logo>
+          <std>http://l.yimg.com/qx/cricket/fufp/images/india_women-10-10-2010-d2c2c7b97e1a1ab2bbea6bd53590d94d.jpg</std>
+          <small>http://l.yimg.com/qx/cricket/fufp/images/india_women_small-10-10-2010-6c7a04e7ce5271bee220ab159db5f385.jpg</small>
+        </logo>
+        <flag>
+          <std>http://l.yimg.com/qx/cricket/fufp/images/india_women_flag-28-8-2012-0fa2af8a7fb72b445cf841cf27ff119a.gif</std>
+          <small>http://l.yimg.com/qx/cricket/fufp/images/india_women_flag_small-28-8-2012-19e94f1d1081d5dde82b381bf8c783b6.gif</small>
+          <roundstd>http://l.yimg.com/qx/cricket/fufp/images/1126-28-8-2012-31b047a255a4a85440f320979f46e57f.png</roundstd>
+          <roundsmall>http://l.yimg.com/qx/cricket/fufp/images/1126_s-28-8-2012-859429af464cda09fa6375a8927d01fc.png</roundsmall>
+          <roundlarge>http://l.yimg.com/qx/cricket/fufp/images/1126_l-28-8-2012-5d693fc1214c737ae8ae36485d332b50.png</roundlarge>
+        </flag>
+      </teams>
+      <teams>
+        <i>1135</i>
+        <fn>West Indies Women</fn>
+        <sn>WIW</sn>
+        <logo>
+          <std>http://l.yimg.com/qx/cricket/fufp/images/west_indies_women-10-10-2010-840983ec617207f77b83ad3d1125118e.jpg</std>
+          <small>http://l.yimg.com/qx/cricket/fufp/images/west_indies_women_small-10-10-2010-226db3c2ae5bc992d2319ea5bbf7aa93.jpg</small>
+        </logo>
+        <flag>
+          <std>http://l.yimg.com/qx/cricket/fufp/images/west_indies_women_flag-28-8-2012-1f60ba1dc32a680e11ae5efe99bcc924.gif</std>
+          <small>http://l.yimg.com/qx/cricket/fufp/images/west_indies_women_flag_small-28-8-2012-7f81c93235b1ea332d460c28778e21a4.gif</small>
+          <roundstd>http://l.yimg.com/qx/cricket/fufp/images/1135-28-8-2012-c9604c0708ca011d5e4459571e037c67.png</roundstd>
+          <roundsmall>http://l.yimg.com/qx/cricket/fufp/images/1135_s-28-8-2012-3d80b00277e4d88c53e107e36f69977c.png</roundsmall>
+          <roundlarge>http://l.yimg.com/qx/cricket/fufp/images/1135_l-28-8-2012-3cf6d74be10db562b1d79b095b67f95c.png</roundlarge>
+        </flag>
+      </teams>
+      <past_ings>
+        <s>
+          <t>1</t>
+          <i>1</i>
+          <ps>0</ps>
+          <stay_live>Yes</stay_live>
+          <pms>live</pms>
+          <ed>Power Play 1</ed>
+          <a>
+            <fo>0</fo>
+            <pp>1</pp>
+            <i>1126</i>
+            <cr>4.76</cr>
+            <r>27</r>
+            <o>5.4</o>
+            <w>0</w>
+            <b>0</b>
+            <lb>0</lb>
+            <wd>0</wd>
+            <nb>1</nb>
+            <pt>0</pt>
+            <l>0</l>
+            <cp>
+              <cp>27</cp>
+              <bls>34</bls>
+              <s>1</s>
+            </cp>
+          </a>
+          <tz>+05:30</tz>
+        </s>
+        <d>
+          <a>
+            <t>
+              <i>60719</i>
+              <a>3</a>
+              <c>Batting</c>
+              <dt />
+              <fd>0</fd>
+              <bd>0</bd>
+              <b>17</b>
+              <r>15</r>
+              <sr>88.235294117647</sr>
+              <four>3</four>
+              <six>0</six>
+              <name>Poonam Raut</name>
+            </t>
+            <t>
+              <i>60261</i>
+              <a>2</a>
+              <c>Batting</c>
+              <dt />
+              <fd>0</fd>
+              <bd>0</bd>
+              <b>18</b>
+              <r>11</r>
+              <sr>61.111111111111</sr>
+              <four>2</four>
+              <six>0</six>
+              <name>Thirush Kamini</name>
+            </t>
+          </a>
+        </d>
+      </past_ings>
+      <toss>
+        <win>1135</win>
+        <bat>0</bat>
+        <text>xxx-xxx-xxx</text>
+      </toss>
+      <result>0</result>
+      <ms>Play in Progress</ms>
+      <mt>2</mt>
+      <cts>1359624098</cts>
+    </Scorecard>
+  </results>
+</query>
+<!-- total: 509 -->
+<!-- engine4.yql.bf1.yahoo.com -->
