@@ -7,11 +7,11 @@
 	<?define ProductExe = "Spr.CricketTicker.exe" ?>	
 	
 	<?define MajorVersion = "1" ?>
-	<?define MinorVersion = "2" ?>
+	<?define MinorVersion = "3" ?>
 	<?ifdef env.BUILD_NUMBER ?>
 		<?define BuildNumber = "$(env.BUILD_NUMBER)" ?>
 	<?else?>
-		<?define BuildNumber = "100" ?>
+		<?define BuildNumber = "999" ?>
 	<?endif?>
 		
 	<Product Id="*"
