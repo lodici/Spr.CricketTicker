@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<query xmlns:yahoo="http://www.yahooapis.com/v1/base.rng" yahoo:count="3" yahoo:created="2013-03-23T18:05:39Z" yahoo:lang="en-US">
+  <diagnostics>
+    <publiclyCallable>true</publiclyCallable>
+    <url execution-start-time="1" execution-stop-time="2" execution-time="1" proxy="DEFAULT"><![CDATA[store://3vynIg3fvfgqWvJcDWyob0]]></url>
+    <url execution-start-time="4" execution-stop-time="783" execution-time="779"><![CDATA[http://cricketwebservice/ws/cwsapi/live/livematches.php?output=summary]]></url>
+    <user-time>784</user-time>
+    <service-time>780</service-time>
+    <build-version>34910</build-version>
+  </diagnostics>
+  <results>
+    <Scorecard>
+      <v>0</v>
+      <mid>185665</mid>
+      <m>2</m>
+      <series>
+        <series_id>11420</series_id>
+        <series_name>Bangladesh in Sri Lanka ODI Series, 3 ODI Cricket Series, 2013</series_name>
+      </series>
+      <place>
+        <vid>511</vid>
+        <stadium>Mahinda Rajapaksa International Cricket Stadium, Hambantota</stadium>
+        <city>Hambantota</city>
+        <country>Sri Lanka</country>
+        <Gimaget>http://l.yimg.com/qx/cricket/fufp/images/venue_511_thumb-29-3-2011-6d176cc2b90b5f9ae21f80be07f15c62.jpg</Gimaget>
+        <date>20130323090000</date>
+        <enddate>20130323170000</enddate>
+      </place>
+      <mn>1st ODI</mn>
+      <teams>
+        <i>8</i>
+        <fn>Sri Lanka</fn>
+        <sn>SL</sn>
+        <logo>
+          <std>http://l.yimg.com/qx/cricket/fufp/images/sri_lanka-1-2-2011-edb7de1ee385a8b002dbf7fcdc6ccb76.jpg</std>
+          <small>http://l.yimg.com/qx/cricket/fufp/images/sri_lanka_small-1-2-2011-fd7dd3af0ad7c29deda66a3a26a306d2.jpg</small>
+        </logo>
+        <flag>
+          <std>http://l.yimg.com/qx/cricket/fufp/images/sri_lanka_flag-1-2-2011-9c66eb3e952d7fcda9b20d42145ef18c.gif</std>
+          <small>http://l.yimg.com/qx/cricket/fufp/images/sri_lanka_flag_small-1-2-2011-4239d880b394fcc423a14234d1fafaac.gif</small>
+          <roundstd>http://l.yimg.com/qx/cricket/fufp/images/8-11-2-2012-09cb390bd958ae05890f56d2b1d9a39a.png</roundstd>
+          <roundsmall>http://l.yimg.com/qx/cricket/fufp/images/8_s-11-2-2012-8d06a8566e73875152c057e7a0993b45.png</roundsmall>
+          <roundlarge>http://l.yimg.com/qx/cricket/fufp/images/8_l-11-2-2012-42596125ceefa9b3960e6231785d0ab6.png</roundlarge>
+        </flag>
+      </teams>
+      <teams>
+        <i>2</i>
+        <fn>Bangladesh</fn>
+        <sn>BAN</sn>
+        <logo>
+          <std>http://l.yimg.com/qx/cricket/fufp/images/bangladesh-1-2-2011-a82e5930ca54b07338c0722680cf68f4.jpg</std>
+          <small>http://l.yimg.com/qx/cricket/fufp/images/bangladesh_small-1-2-2011-e6da75e6da98050adb04569f7f15b06e.jpg</small>
+        </logo>
+        <flag>
+          <std>http://l.yimg.com/qx/cricket/fufp/images/bangladesh_flag-1-2-2011-60e36623244889186536ddf79ddd7a74.gif</std>
+          <small>http://l.yimg.com/qx/cricket/fufp/images/bangladesh_flag_small-1-2-2011-578103ec57a0fd8d6147f9e92b6a1b7e.gif</small>
+          <roundstd>http://l.yimg.com/qx/cricket/fufp/images/2-11-2-2012-4eecb7dca92c191ec776311e4fe802cb.png</roundstd>
+          <roundsmall>http://l.yimg.com/qx/cricket/fufp/images/2_s-11-2-2012-4490ca9fcde22aa60d67259151e5d1f0.png</roundsmall>
+          <roundlarge>http://l.yimg.com/qx/cricket/fufp/images/2_l-11-2-2012-a853bb5b43497e2b3a38791dc389adc0.png</roundlarge>
+        </flag>
+      </teams>
+      <past_ings>
+        <s>
+          <t>1</t>
+          <i>2</i>
+          <ps>0</ps>
+          <stay_live>Yes</stay_live>
+          <pms>post</pms>
+          <a>
+            <fo>0</fo>
+            <pp />
+            <i>8</i>
+            <cr>6.67</cr>
+            <r>238</r>
+            <o>35.4</o>
+            <w>2</w>
+            <reo>41</reo>
+            <b>0</b>
+            <lb>13</lb>
+            <wd>4</wd>
+            <nb>0</nb>
+            <pt>0</pt>
+            <l>0</l>
+            <cp>
+              <cp>4</cp>
+              <bls>4</bls>
+              <s>0</s>
+            </cp>
+          </a>
+          <rts>1364060470</rts>
+          <tz>+05:30</tz>
+        </s>
+        <d>
+          <a>
+            <t>
+              <i>978</i>
+              <a>2</a>
+              <c>not out</c>
+              <dt />
+              <fd>0</fd>
+              <bd>0</bd>
+              <b>108</b>
+              <r>113</r>
+              <sr>104.62962962963</sr>
+              <four>11</four>
+              <six>0</six>
+              <name>Tillakaratne Dilshan</name>
+            </t>
+            <t>
+              <i>4393</i>
+              <a>3</a>
+              <c>not out</c>
+              <dt />
+              <fd>0</fd>
+              <bd>0</bd>
+              <b>3</b>
+              <r>3</r>
+              <sr>100</sr>
+              <four>0</four>
+              <six>0</six>
+              <name>Dinesh Chandimal</name>
+            </t>
+          </a>
+        </d>
+      </past_ings>
+      <past_ings>
+        <s>
+          <t>1</t>
+          <i>1</i>
+          <ps>0</ps>
+          <stay_live>Yes</stay_live>
+          <pms>live</pms>
+          <a>
+            <fo>0</fo>
+            <pp />
+            <i>2</i>
+            <cr>5.18</cr>
+            <r>259</r>
+            <o>50</o>
+            <w>8</w>
+            <b>1</b>
+            <lb>1</lb>
+            <wd>11</wd>
+            <nb>1</nb>
+            <pt>0</pt>
+            <l>0</l>
+          </a>
+          <tz>+05:30</tz>
+        </s>
+      </past_ings>
+      <toss>
+        <win>8</win>
+        <bat>0</bat>
+        <text>xxx-xxx-xxx</text>
+      </toss>
+      <result>
+        <r>1</r>
+        <winner>8</winner>
+        <by>8</by>
+        <how>wickets</how>
+        <isdl>1</isdl>
+        <isso>0</isso>
+        <isff>0</isff>
+        <desc />
+        <mom>
+          <fn>Tillakaratne Dilshan</fn>
+          <i>978</i>
+        </mom>
+      </result>
+      <ms>Match Ended</ms>
+      <mt>2</mt>
+      <cts>1364061938</cts>
+    </Scorecard>
+  </results>
+</query>
+<!-- total: 784 -->
+<!-- engine6.yql.bf1.yahoo.com -->
