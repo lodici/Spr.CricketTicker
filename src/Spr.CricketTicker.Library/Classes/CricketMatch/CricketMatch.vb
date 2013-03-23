@@ -31,6 +31,7 @@ Public Class CricketMatch
     Public Property DayNumber As Integer = 1
     Public Property SessionNumber As Integer = 1
     Public Property MatchResult As MatchResultCode = MatchResultCode.None
+    Public Property ReverseScoreDisplay As Boolean = False
 
     Public ReadOnly Property Teams As CricketTeam()
         Get
@@ -134,7 +135,7 @@ Public Class CricketMatch
 
     Protected Function GetScore(runsScored As Integer, wicketsLost As Integer) As String
         Dim sb As New StringBuilder
-        If My.Settings.OzScore = True Then
+        If ReverseScoreDisplay() Then
             sb.Append(wicketsLost).Append("/").Append(runsScored)
         Else
             sb.Append(runsScored).Append("/").Append(wicketsLost)
@@ -173,7 +174,7 @@ Public Class CricketMatch
                 If (IsMatchInProgress And MatchStatus <> "Innings Break") Or (MatchStatus = "Match yet to begin") Then
                     Dim scorePart1 As String
                     Dim scorePart2 As String
-                    If My.Settings.OzScore = True Then
+                    If ReverseScoreDisplay() Then
                         scorePart1 = i.WicketsLost.ToString.ToString
                         scorePart2 = i.RunsScored.ToString
                     Else

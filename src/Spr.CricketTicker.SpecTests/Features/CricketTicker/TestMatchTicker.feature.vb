@@ -58,9 +58,9 @@ Namespace Spr.CricketTicker.SpecTests.Features.CricketTicker
         End Sub
         
         <NUnit.Framework.TestAttribute(),  _
-         NUnit.Framework.DescriptionAttribute("Match yet to begin")>  _
-        Public Overridable Sub MatchYetToBegin()
-            Dim scenarioInfo As TechTalk.SpecFlow.ScenarioInfo = New TechTalk.SpecFlow.ScenarioInfo("Match yet to begin", CType(Nothing,String()))
+         NUnit.Framework.DescriptionAttribute("Display score using Oz format")>  _
+        Public Overridable Sub DisplayScoreUsingOzFormat()
+            Dim scenarioInfo As TechTalk.SpecFlow.ScenarioInfo = New TechTalk.SpecFlow.ScenarioInfo("Display score using Oz format", CType(Nothing,String()))
 #ExternalSource("TestMatchTicker.feature",4)
 Me.ScenarioSetup(scenarioInfo)
 #End ExternalSource
@@ -74,19 +74,58 @@ Me.ScenarioSetup(scenarioInfo)
  testRunner.And("the teams are", CType(Nothing,String), table1, "And ")
 #End ExternalSource
             Dim table2 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"InningsNumber", "BattingTeamId", "RunsScored", "WicketsTaken"})
-            table2.AddRow(New String() {"1", "2", "0", "0"})
+            table2.AddRow(New String() {"1", "2", "309", "10"})
+            table2.AddRow(New String() {"2", "1", "208", "5"})
 #ExternalSource("TestMatchTicker.feature",10)
  testRunner.And("the innings scores are", CType(Nothing,String), table2, "And ")
 #End ExternalSource
             Dim table3 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"CurrentInnings", "Day", "Status", "ResultCode"})
-            table3.AddRow(New String() {"1", "1", "Match yet to begin", "None"})
-#ExternalSource("TestMatchTicker.feature",13)
+            table3.AddRow(New String() {"2", "2", "In Progress", "None"})
+#ExternalSource("TestMatchTicker.feature",14)
  testRunner.And("the match status is", CType(Nothing,String), table3, "And ")
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",16)
+#ExternalSource("TestMatchTicker.feature",17)
+ testRunner.And("the score should be displayed using the Oz format", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "And ")
+#End ExternalSource
+#ExternalSource("TestMatchTicker.feature",18)
  testRunner.When("the cricket ticker is updated", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "When ")
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",17)
+#ExternalSource("TestMatchTicker.feature",19)
+ testRunner.Then("the ticker should display ""ENG:5/208 SA:309 D:2 In Progress""", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Then ")
+#End ExternalSource
+            Me.ScenarioCleanup
+        End Sub
+        
+        <NUnit.Framework.TestAttribute(),  _
+         NUnit.Framework.DescriptionAttribute("Match yet to begin")>  _
+        Public Overridable Sub MatchYetToBegin()
+            Dim scenarioInfo As TechTalk.SpecFlow.ScenarioInfo = New TechTalk.SpecFlow.ScenarioInfo("Match yet to begin", CType(Nothing,String()))
+#ExternalSource("TestMatchTicker.feature",21)
+Me.ScenarioSetup(scenarioInfo)
+#End ExternalSource
+#ExternalSource("TestMatchTicker.feature",22)
+ testRunner.Given("a live Test match", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Given ")
+#End ExternalSource
+            Dim table4 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"Id", "Abbreviation"})
+            table4.AddRow(New String() {"1", "ENG"})
+            table4.AddRow(New String() {"2", "SA"})
+#ExternalSource("TestMatchTicker.feature",23)
+ testRunner.And("the teams are", CType(Nothing,String), table4, "And ")
+#End ExternalSource
+            Dim table5 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"InningsNumber", "BattingTeamId", "RunsScored", "WicketsTaken"})
+            table5.AddRow(New String() {"1", "2", "0", "0"})
+#ExternalSource("TestMatchTicker.feature",27)
+ testRunner.And("the innings scores are", CType(Nothing,String), table5, "And ")
+#End ExternalSource
+            Dim table6 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"CurrentInnings", "Day", "Status", "ResultCode"})
+            table6.AddRow(New String() {"1", "1", "Match yet to begin", "None"})
+#ExternalSource("TestMatchTicker.feature",30)
+ testRunner.And("the match status is", CType(Nothing,String), table6, "And ")
+#End ExternalSource
+#ExternalSource("TestMatchTicker.feature",33)
+ testRunner.When("the cricket ticker is updated", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "When ")
+#End ExternalSource
+#ExternalSource("TestMatchTicker.feature",34)
  testRunner.Then("the ticker should display ""ENG:0 SA:0/0 Match yet to begin""", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Then ")
 #End ExternalSource
             Me.ScenarioCleanup
@@ -96,32 +135,32 @@ Me.ScenarioSetup(scenarioInfo)
          NUnit.Framework.DescriptionAttribute("Day one match in progress")>  _
         Public Overridable Sub DayOneMatchInProgress()
             Dim scenarioInfo As TechTalk.SpecFlow.ScenarioInfo = New TechTalk.SpecFlow.ScenarioInfo("Day one match in progress", CType(Nothing,String()))
-#ExternalSource("TestMatchTicker.feature",19)
+#ExternalSource("TestMatchTicker.feature",36)
 Me.ScenarioSetup(scenarioInfo)
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",20)
+#ExternalSource("TestMatchTicker.feature",37)
  testRunner.Given("a live Test match", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Given ")
 #End ExternalSource
-            Dim table4 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"Id", "Abbreviation"})
-            table4.AddRow(New String() {"1", "ENG"})
-            table4.AddRow(New String() {"2", "SA"})
-#ExternalSource("TestMatchTicker.feature",21)
- testRunner.And("the teams are", CType(Nothing,String), table4, "And ")
+            Dim table7 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"Id", "Abbreviation"})
+            table7.AddRow(New String() {"1", "ENG"})
+            table7.AddRow(New String() {"2", "SA"})
+#ExternalSource("TestMatchTicker.feature",38)
+ testRunner.And("the teams are", CType(Nothing,String), table7, "And ")
 #End ExternalSource
-            Dim table5 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"InningsNumber", "BattingTeamId", "RunsScored", "WicketsTaken"})
-            table5.AddRow(New String() {"1", "2", "132", "3"})
-#ExternalSource("TestMatchTicker.feature",25)
- testRunner.And("the innings scores are", CType(Nothing,String), table5, "And ")
+            Dim table8 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"InningsNumber", "BattingTeamId", "RunsScored", "WicketsTaken"})
+            table8.AddRow(New String() {"1", "2", "132", "3"})
+#ExternalSource("TestMatchTicker.feature",42)
+ testRunner.And("the innings scores are", CType(Nothing,String), table8, "And ")
 #End ExternalSource
-            Dim table6 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"CurrentInnings", "Day", "Status", "ResultCode"})
-            table6.AddRow(New String() {"1", "1", "In Progress", "None"})
-#ExternalSource("TestMatchTicker.feature",28)
- testRunner.And("the match status is", CType(Nothing,String), table6, "And ")
+            Dim table9 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"CurrentInnings", "Day", "Status", "ResultCode"})
+            table9.AddRow(New String() {"1", "1", "In Progress", "None"})
+#ExternalSource("TestMatchTicker.feature",45)
+ testRunner.And("the match status is", CType(Nothing,String), table9, "And ")
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",31)
+#ExternalSource("TestMatchTicker.feature",48)
  testRunner.When("the cricket ticker is updated", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "When ")
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",32)
+#ExternalSource("TestMatchTicker.feature",49)
  testRunner.Then("the ticker should display ""ENG:0 SA:132/3 D:1 In Progress""", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Then ")
 #End ExternalSource
             Me.ScenarioCleanup
@@ -131,32 +170,32 @@ Me.ScenarioSetup(scenarioInfo)
          NUnit.Framework.DescriptionAttribute("Day two innings break")>  _
         Public Overridable Sub DayTwoInningsBreak()
             Dim scenarioInfo As TechTalk.SpecFlow.ScenarioInfo = New TechTalk.SpecFlow.ScenarioInfo("Day two innings break", CType(Nothing,String()))
-#ExternalSource("TestMatchTicker.feature",34)
+#ExternalSource("TestMatchTicker.feature",51)
 Me.ScenarioSetup(scenarioInfo)
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",35)
+#ExternalSource("TestMatchTicker.feature",52)
  testRunner.Given("a live Test match", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Given ")
 #End ExternalSource
-            Dim table7 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"Id", "Abbreviation"})
-            table7.AddRow(New String() {"1", "ENG"})
-            table7.AddRow(New String() {"2", "SA"})
-#ExternalSource("TestMatchTicker.feature",36)
- testRunner.And("the teams are", CType(Nothing,String), table7, "And ")
+            Dim table10 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"Id", "Abbreviation"})
+            table10.AddRow(New String() {"1", "ENG"})
+            table10.AddRow(New String() {"2", "SA"})
+#ExternalSource("TestMatchTicker.feature",53)
+ testRunner.And("the teams are", CType(Nothing,String), table10, "And ")
 #End ExternalSource
-            Dim table8 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"InningsNumber", "BattingTeamId", "RunsScored", "WicketsTaken"})
-            table8.AddRow(New String() {"1", "2", "309", "10"})
-#ExternalSource("TestMatchTicker.feature",40)
- testRunner.And("the innings scores are", CType(Nothing,String), table8, "And ")
+            Dim table11 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"InningsNumber", "BattingTeamId", "RunsScored", "WicketsTaken"})
+            table11.AddRow(New String() {"1", "2", "309", "10"})
+#ExternalSource("TestMatchTicker.feature",57)
+ testRunner.And("the innings scores are", CType(Nothing,String), table11, "And ")
 #End ExternalSource
-            Dim table9 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"CurrentInnings", "Day", "Status", "ResultCode"})
-            table9.AddRow(New String() {"1", "2", "Innings Break", "None"})
-#ExternalSource("TestMatchTicker.feature",43)
- testRunner.And("the match status is", CType(Nothing,String), table9, "And ")
+            Dim table12 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"CurrentInnings", "Day", "Status", "ResultCode"})
+            table12.AddRow(New String() {"1", "2", "Innings Break", "None"})
+#ExternalSource("TestMatchTicker.feature",60)
+ testRunner.And("the match status is", CType(Nothing,String), table12, "And ")
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",46)
+#ExternalSource("TestMatchTicker.feature",63)
  testRunner.When("the cricket ticker is updated", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "When ")
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",47)
+#ExternalSource("TestMatchTicker.feature",64)
  testRunner.Then("the ticker should display ""ENG:0 SA:309 D:2 Innings Break""", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Then ")
 #End ExternalSource
             Me.ScenarioCleanup
@@ -166,33 +205,33 @@ Me.ScenarioSetup(scenarioInfo)
          NUnit.Framework.DescriptionAttribute("Day two seconds innings start")>  _
         Public Overridable Sub DayTwoSecondsInningsStart()
             Dim scenarioInfo As TechTalk.SpecFlow.ScenarioInfo = New TechTalk.SpecFlow.ScenarioInfo("Day two seconds innings start", CType(Nothing,String()))
-#ExternalSource("TestMatchTicker.feature",49)
+#ExternalSource("TestMatchTicker.feature",66)
 Me.ScenarioSetup(scenarioInfo)
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",50)
+#ExternalSource("TestMatchTicker.feature",67)
  testRunner.Given("a live Test match", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Given ")
 #End ExternalSource
-            Dim table10 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"Id", "Abbreviation"})
-            table10.AddRow(New String() {"1", "ENG"})
-            table10.AddRow(New String() {"2", "SA"})
-#ExternalSource("TestMatchTicker.feature",51)
- testRunner.And("the teams are", CType(Nothing,String), table10, "And ")
+            Dim table13 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"Id", "Abbreviation"})
+            table13.AddRow(New String() {"1", "ENG"})
+            table13.AddRow(New String() {"2", "SA"})
+#ExternalSource("TestMatchTicker.feature",68)
+ testRunner.And("the teams are", CType(Nothing,String), table13, "And ")
 #End ExternalSource
-            Dim table11 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"InningsNumber", "BattingTeamId", "RunsScored", "WicketsTaken"})
-            table11.AddRow(New String() {"1", "2", "309", "10"})
-            table11.AddRow(New String() {"2", "1", "0", "0"})
-#ExternalSource("TestMatchTicker.feature",55)
- testRunner.And("the innings scores are", CType(Nothing,String), table11, "And ")
+            Dim table14 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"InningsNumber", "BattingTeamId", "RunsScored", "WicketsTaken"})
+            table14.AddRow(New String() {"1", "2", "309", "10"})
+            table14.AddRow(New String() {"2", "1", "0", "0"})
+#ExternalSource("TestMatchTicker.feature",72)
+ testRunner.And("the innings scores are", CType(Nothing,String), table14, "And ")
 #End ExternalSource
-            Dim table12 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"CurrentInnings", "Day", "Status", "ResultCode"})
-            table12.AddRow(New String() {"2", "2", "In Progress", "None"})
-#ExternalSource("TestMatchTicker.feature",59)
- testRunner.And("the match status is", CType(Nothing,String), table12, "And ")
+            Dim table15 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"CurrentInnings", "Day", "Status", "ResultCode"})
+            table15.AddRow(New String() {"2", "2", "In Progress", "None"})
+#ExternalSource("TestMatchTicker.feature",76)
+ testRunner.And("the match status is", CType(Nothing,String), table15, "And ")
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",62)
+#ExternalSource("TestMatchTicker.feature",79)
  testRunner.When("the cricket ticker is updated", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "When ")
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",63)
+#ExternalSource("TestMatchTicker.feature",80)
  testRunner.Then("the ticker should display ""ENG:0/0 SA:309 D:2 In Progress""", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Then ")
 #End ExternalSource
             Me.ScenarioCleanup
@@ -202,33 +241,33 @@ Me.ScenarioSetup(scenarioInfo)
          NUnit.Framework.DescriptionAttribute("Day two seconds innings in progress")>  _
         Public Overridable Sub DayTwoSecondsInningsInProgress()
             Dim scenarioInfo As TechTalk.SpecFlow.ScenarioInfo = New TechTalk.SpecFlow.ScenarioInfo("Day two seconds innings in progress", CType(Nothing,String()))
-#ExternalSource("TestMatchTicker.feature",65)
+#ExternalSource("TestMatchTicker.feature",82)
 Me.ScenarioSetup(scenarioInfo)
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",66)
+#ExternalSource("TestMatchTicker.feature",83)
  testRunner.Given("a live Test match", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Given ")
 #End ExternalSource
-            Dim table13 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"Id", "Abbreviation"})
-            table13.AddRow(New String() {"1", "ENG"})
-            table13.AddRow(New String() {"2", "SA"})
-#ExternalSource("TestMatchTicker.feature",67)
- testRunner.And("the teams are", CType(Nothing,String), table13, "And ")
+            Dim table16 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"Id", "Abbreviation"})
+            table16.AddRow(New String() {"1", "ENG"})
+            table16.AddRow(New String() {"2", "SA"})
+#ExternalSource("TestMatchTicker.feature",84)
+ testRunner.And("the teams are", CType(Nothing,String), table16, "And ")
 #End ExternalSource
-            Dim table14 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"InningsNumber", "BattingTeamId", "RunsScored", "WicketsTaken"})
-            table14.AddRow(New String() {"1", "2", "309", "10"})
-            table14.AddRow(New String() {"2", "1", "208", "5"})
-#ExternalSource("TestMatchTicker.feature",71)
- testRunner.And("the innings scores are", CType(Nothing,String), table14, "And ")
+            Dim table17 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"InningsNumber", "BattingTeamId", "RunsScored", "WicketsTaken"})
+            table17.AddRow(New String() {"1", "2", "309", "10"})
+            table17.AddRow(New String() {"2", "1", "208", "5"})
+#ExternalSource("TestMatchTicker.feature",88)
+ testRunner.And("the innings scores are", CType(Nothing,String), table17, "And ")
 #End ExternalSource
-            Dim table15 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"CurrentInnings", "Day", "Status", "ResultCode"})
-            table15.AddRow(New String() {"2", "2", "In Progress", "None"})
-#ExternalSource("TestMatchTicker.feature",75)
- testRunner.And("the match status is", CType(Nothing,String), table15, "And ")
+            Dim table18 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"CurrentInnings", "Day", "Status", "ResultCode"})
+            table18.AddRow(New String() {"2", "2", "In Progress", "None"})
+#ExternalSource("TestMatchTicker.feature",92)
+ testRunner.And("the match status is", CType(Nothing,String), table18, "And ")
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",78)
+#ExternalSource("TestMatchTicker.feature",95)
  testRunner.When("the cricket ticker is updated", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "When ")
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",79)
+#ExternalSource("TestMatchTicker.feature",96)
  testRunner.Then("the ticker should display ""ENG:208/5 SA:309 D:2 In Progress""", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Then ")
 #End ExternalSource
             Me.ScenarioCleanup
@@ -238,33 +277,33 @@ Me.ScenarioSetup(scenarioInfo)
          NUnit.Framework.DescriptionAttribute("Day two seconds innings stumps")>  _
         Public Overridable Sub DayTwoSecondsInningsStumps()
             Dim scenarioInfo As TechTalk.SpecFlow.ScenarioInfo = New TechTalk.SpecFlow.ScenarioInfo("Day two seconds innings stumps", CType(Nothing,String()))
-#ExternalSource("TestMatchTicker.feature",81)
+#ExternalSource("TestMatchTicker.feature",98)
 Me.ScenarioSetup(scenarioInfo)
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",82)
+#ExternalSource("TestMatchTicker.feature",99)
  testRunner.Given("a live Test match", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Given ")
 #End ExternalSource
-            Dim table16 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"Id", "Abbreviation"})
-            table16.AddRow(New String() {"1", "ENG"})
-            table16.AddRow(New String() {"2", "SA"})
-#ExternalSource("TestMatchTicker.feature",83)
- testRunner.And("the teams are", CType(Nothing,String), table16, "And ")
+            Dim table19 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"Id", "Abbreviation"})
+            table19.AddRow(New String() {"1", "ENG"})
+            table19.AddRow(New String() {"2", "SA"})
+#ExternalSource("TestMatchTicker.feature",100)
+ testRunner.And("the teams are", CType(Nothing,String), table19, "And ")
 #End ExternalSource
-            Dim table17 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"InningsNumber", "BattingTeamId", "RunsScored", "WicketsTaken"})
-            table17.AddRow(New String() {"1", "2", "309", "10"})
-            table17.AddRow(New String() {"2", "1", "312", "8"})
-#ExternalSource("TestMatchTicker.feature",87)
- testRunner.And("the innings scores are", CType(Nothing,String), table17, "And ")
+            Dim table20 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"InningsNumber", "BattingTeamId", "RunsScored", "WicketsTaken"})
+            table20.AddRow(New String() {"1", "2", "309", "10"})
+            table20.AddRow(New String() {"2", "1", "312", "8"})
+#ExternalSource("TestMatchTicker.feature",104)
+ testRunner.And("the innings scores are", CType(Nothing,String), table20, "And ")
 #End ExternalSource
-            Dim table18 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"CurrentInnings", "Day", "Status", "ResultCode"})
-            table18.AddRow(New String() {"2", "2", "Stumps", "None"})
-#ExternalSource("TestMatchTicker.feature",91)
- testRunner.And("the match status is", CType(Nothing,String), table18, "And ")
+            Dim table21 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"CurrentInnings", "Day", "Status", "ResultCode"})
+            table21.AddRow(New String() {"2", "2", "Stumps", "None"})
+#ExternalSource("TestMatchTicker.feature",108)
+ testRunner.And("the match status is", CType(Nothing,String), table21, "And ")
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",94)
+#ExternalSource("TestMatchTicker.feature",111)
  testRunner.When("the cricket ticker is updated", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "When ")
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",95)
+#ExternalSource("TestMatchTicker.feature",112)
  testRunner.Then("the ticker should display ""ENG:312/8 SA:309 D:2 Stumps""", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Then ")
 #End ExternalSource
             Me.ScenarioCleanup
@@ -274,33 +313,33 @@ Me.ScenarioSetup(scenarioInfo)
          NUnit.Framework.DescriptionAttribute("Day three seconds innings innings break")>  _
         Public Overridable Sub DayThreeSecondsInningsInningsBreak()
             Dim scenarioInfo As TechTalk.SpecFlow.ScenarioInfo = New TechTalk.SpecFlow.ScenarioInfo("Day three seconds innings innings break", CType(Nothing,String()))
-#ExternalSource("TestMatchTicker.feature",97)
+#ExternalSource("TestMatchTicker.feature",114)
 Me.ScenarioSetup(scenarioInfo)
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",98)
+#ExternalSource("TestMatchTicker.feature",115)
  testRunner.Given("a live Test match", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Given ")
 #End ExternalSource
-            Dim table19 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"Id", "Abbreviation"})
-            table19.AddRow(New String() {"1", "ENG"})
-            table19.AddRow(New String() {"2", "SA"})
-#ExternalSource("TestMatchTicker.feature",99)
-  testRunner.And("the teams are", CType(Nothing,String), table19, "And ")
+            Dim table22 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"Id", "Abbreviation"})
+            table22.AddRow(New String() {"1", "ENG"})
+            table22.AddRow(New String() {"2", "SA"})
+#ExternalSource("TestMatchTicker.feature",116)
+  testRunner.And("the teams are", CType(Nothing,String), table22, "And ")
 #End ExternalSource
-            Dim table20 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"InningsNumber", "BattingTeamId", "RunsScored", "WicketsTaken"})
-            table20.AddRow(New String() {"1", "2", "309", "10"})
-            table20.AddRow(New String() {"2", "1", "346", "10"})
-#ExternalSource("TestMatchTicker.feature",103)
- testRunner.And("the innings scores are", CType(Nothing,String), table20, "And ")
+            Dim table23 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"InningsNumber", "BattingTeamId", "RunsScored", "WicketsTaken"})
+            table23.AddRow(New String() {"1", "2", "309", "10"})
+            table23.AddRow(New String() {"2", "1", "346", "10"})
+#ExternalSource("TestMatchTicker.feature",120)
+ testRunner.And("the innings scores are", CType(Nothing,String), table23, "And ")
 #End ExternalSource
-            Dim table21 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"CurrentInnings", "Day", "Status", "ResultCode"})
-            table21.AddRow(New String() {"2", "3", "Innings Break", "None"})
-#ExternalSource("TestMatchTicker.feature",107)
- testRunner.And("the match status is", CType(Nothing,String), table21, "And ")
+            Dim table24 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"CurrentInnings", "Day", "Status", "ResultCode"})
+            table24.AddRow(New String() {"2", "3", "Innings Break", "None"})
+#ExternalSource("TestMatchTicker.feature",124)
+ testRunner.And("the match status is", CType(Nothing,String), table24, "And ")
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",110)
+#ExternalSource("TestMatchTicker.feature",127)
  testRunner.When("the cricket ticker is updated", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "When ")
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",111)
+#ExternalSource("TestMatchTicker.feature",128)
  testRunner.Then("the ticker should display ""ENG:346 SA:309 D:3 Innings Break""", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Then ")
 #End ExternalSource
             Me.ScenarioCleanup
@@ -310,43 +349,6 @@ Me.ScenarioSetup(scenarioInfo)
          NUnit.Framework.DescriptionAttribute("Day three third innings start")>  _
         Public Overridable Sub DayThreeThirdInningsStart()
             Dim scenarioInfo As TechTalk.SpecFlow.ScenarioInfo = New TechTalk.SpecFlow.ScenarioInfo("Day three third innings start", CType(Nothing,String()))
-#ExternalSource("TestMatchTicker.feature",113)
-Me.ScenarioSetup(scenarioInfo)
-#End ExternalSource
-#ExternalSource("TestMatchTicker.feature",114)
- testRunner.Given("a live Test match", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Given ")
-#End ExternalSource
-            Dim table22 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"Id", "Abbreviation"})
-            table22.AddRow(New String() {"1", "ENG"})
-            table22.AddRow(New String() {"2", "SA"})
-#ExternalSource("TestMatchTicker.feature",115)
- testRunner.And("the teams are", CType(Nothing,String), table22, "And ")
-#End ExternalSource
-            Dim table23 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"InningsNumber", "BattingTeamId", "RunsScored", "WicketsTaken"})
-            table23.AddRow(New String() {"1", "2", "309", "10"})
-            table23.AddRow(New String() {"2", "1", "346", "10"})
-            table23.AddRow(New String() {"3", "2", "0", "0"})
-#ExternalSource("TestMatchTicker.feature",119)
- testRunner.And("the innings scores are", CType(Nothing,String), table23, "And ")
-#End ExternalSource
-            Dim table24 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"CurrentInnings", "Day", "Status", "ResultCode"})
-            table24.AddRow(New String() {"3", "3", "In Progress", "None"})
-#ExternalSource("TestMatchTicker.feature",124)
- testRunner.And("the match status is", CType(Nothing,String), table24, "And ")
-#End ExternalSource
-#ExternalSource("TestMatchTicker.feature",127)
- testRunner.When("the cricket ticker is updated", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "When ")
-#End ExternalSource
-#ExternalSource("TestMatchTicker.feature",128)
- testRunner.Then("the ticker should display ""ENG:346 SA:309+0/0 D:3 In Progress""", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Then ")
-#End ExternalSource
-            Me.ScenarioCleanup
-        End Sub
-        
-        <NUnit.Framework.TestAttribute(),  _
-         NUnit.Framework.DescriptionAttribute("Day three third innings in progress")>  _
-        Public Overridable Sub DayThreeThirdInningsInProgress()
-            Dim scenarioInfo As TechTalk.SpecFlow.ScenarioInfo = New TechTalk.SpecFlow.ScenarioInfo("Day three third innings in progress", CType(Nothing,String()))
 #ExternalSource("TestMatchTicker.feature",130)
 Me.ScenarioSetup(scenarioInfo)
 #End ExternalSource
@@ -362,7 +364,7 @@ Me.ScenarioSetup(scenarioInfo)
             Dim table26 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"InningsNumber", "BattingTeamId", "RunsScored", "WicketsTaken"})
             table26.AddRow(New String() {"1", "2", "309", "10"})
             table26.AddRow(New String() {"2", "1", "346", "10"})
-            table26.AddRow(New String() {"3", "2", "54", "0"})
+            table26.AddRow(New String() {"3", "2", "0", "0"})
 #ExternalSource("TestMatchTicker.feature",136)
  testRunner.And("the innings scores are", CType(Nothing,String), table26, "And ")
 #End ExternalSource
@@ -375,15 +377,15 @@ Me.ScenarioSetup(scenarioInfo)
  testRunner.When("the cricket ticker is updated", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "When ")
 #End ExternalSource
 #ExternalSource("TestMatchTicker.feature",145)
- testRunner.Then("the ticker should display ""ENG:346 SA:309+54/0 D:3 In Progress""", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Then ")
+ testRunner.Then("the ticker should display ""ENG:346 SA:309+0/0 D:3 In Progress""", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Then ")
 #End ExternalSource
             Me.ScenarioCleanup
         End Sub
         
         <NUnit.Framework.TestAttribute(),  _
-         NUnit.Framework.DescriptionAttribute("Day three third innings innings break")>  _
-        Public Overridable Sub DayThreeThirdInningsInningsBreak()
-            Dim scenarioInfo As TechTalk.SpecFlow.ScenarioInfo = New TechTalk.SpecFlow.ScenarioInfo("Day three third innings innings break", CType(Nothing,String()))
+         NUnit.Framework.DescriptionAttribute("Day three third innings in progress")>  _
+        Public Overridable Sub DayThreeThirdInningsInProgress()
+            Dim scenarioInfo As TechTalk.SpecFlow.ScenarioInfo = New TechTalk.SpecFlow.ScenarioInfo("Day three third innings in progress", CType(Nothing,String()))
 #ExternalSource("TestMatchTicker.feature",147)
 Me.ScenarioSetup(scenarioInfo)
 #End ExternalSource
@@ -399,12 +401,12 @@ Me.ScenarioSetup(scenarioInfo)
             Dim table29 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"InningsNumber", "BattingTeamId", "RunsScored", "WicketsTaken"})
             table29.AddRow(New String() {"1", "2", "309", "10"})
             table29.AddRow(New String() {"2", "1", "346", "10"})
-            table29.AddRow(New String() {"3", "2", "157", "10"})
+            table29.AddRow(New String() {"3", "2", "54", "0"})
 #ExternalSource("TestMatchTicker.feature",153)
  testRunner.And("the innings scores are", CType(Nothing,String), table29, "And ")
 #End ExternalSource
             Dim table30 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"CurrentInnings", "Day", "Status", "ResultCode"})
-            table30.AddRow(New String() {"3", "3", "Innings Break", "None"})
+            table30.AddRow(New String() {"3", "3", "In Progress", "None"})
 #ExternalSource("TestMatchTicker.feature",158)
  testRunner.And("the match status is", CType(Nothing,String), table30, "And ")
 #End ExternalSource
@@ -412,15 +414,15 @@ Me.ScenarioSetup(scenarioInfo)
  testRunner.When("the cricket ticker is updated", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "When ")
 #End ExternalSource
 #ExternalSource("TestMatchTicker.feature",162)
- testRunner.Then("the ticker should display ""ENG:346 SA:309+157 D:3 Innings Break""", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Then ")
+ testRunner.Then("the ticker should display ""ENG:346 SA:309+54/0 D:3 In Progress""", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Then ")
 #End ExternalSource
             Me.ScenarioCleanup
         End Sub
         
         <NUnit.Framework.TestAttribute(),  _
-         NUnit.Framework.DescriptionAttribute("Day three fourth innings start")>  _
-        Public Overridable Sub DayThreeFourthInningsStart()
-            Dim scenarioInfo As TechTalk.SpecFlow.ScenarioInfo = New TechTalk.SpecFlow.ScenarioInfo("Day three fourth innings start", CType(Nothing,String()))
+         NUnit.Framework.DescriptionAttribute("Day three third innings innings break")>  _
+        Public Overridable Sub DayThreeThirdInningsInningsBreak()
+            Dim scenarioInfo As TechTalk.SpecFlow.ScenarioInfo = New TechTalk.SpecFlow.ScenarioInfo("Day three third innings innings break", CType(Nothing,String()))
 #ExternalSource("TestMatchTicker.feature",164)
 Me.ScenarioSetup(scenarioInfo)
 #End ExternalSource
@@ -437,19 +439,56 @@ Me.ScenarioSetup(scenarioInfo)
             table32.AddRow(New String() {"1", "2", "309", "10"})
             table32.AddRow(New String() {"2", "1", "346", "10"})
             table32.AddRow(New String() {"3", "2", "157", "10"})
-            table32.AddRow(New String() {"4", "1", "0", "0"})
 #ExternalSource("TestMatchTicker.feature",170)
  testRunner.And("the innings scores are", CType(Nothing,String), table32, "And ")
 #End ExternalSource
             Dim table33 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"CurrentInnings", "Day", "Status", "ResultCode"})
-            table33.AddRow(New String() {"4", "3", "In Progress", "None"})
-#ExternalSource("TestMatchTicker.feature",176)
+            table33.AddRow(New String() {"3", "3", "Innings Break", "None"})
+#ExternalSource("TestMatchTicker.feature",175)
  testRunner.And("the match status is", CType(Nothing,String), table33, "And ")
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",179)
+#ExternalSource("TestMatchTicker.feature",178)
  testRunner.When("the cricket ticker is updated", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "When ")
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",180)
+#ExternalSource("TestMatchTicker.feature",179)
+ testRunner.Then("the ticker should display ""ENG:346 SA:309+157 D:3 Innings Break""", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Then ")
+#End ExternalSource
+            Me.ScenarioCleanup
+        End Sub
+        
+        <NUnit.Framework.TestAttribute(),  _
+         NUnit.Framework.DescriptionAttribute("Day three fourth innings start")>  _
+        Public Overridable Sub DayThreeFourthInningsStart()
+            Dim scenarioInfo As TechTalk.SpecFlow.ScenarioInfo = New TechTalk.SpecFlow.ScenarioInfo("Day three fourth innings start", CType(Nothing,String()))
+#ExternalSource("TestMatchTicker.feature",181)
+Me.ScenarioSetup(scenarioInfo)
+#End ExternalSource
+#ExternalSource("TestMatchTicker.feature",182)
+ testRunner.Given("a live Test match", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Given ")
+#End ExternalSource
+            Dim table34 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"Id", "Abbreviation"})
+            table34.AddRow(New String() {"1", "ENG"})
+            table34.AddRow(New String() {"2", "SA"})
+#ExternalSource("TestMatchTicker.feature",183)
+ testRunner.And("the teams are", CType(Nothing,String), table34, "And ")
+#End ExternalSource
+            Dim table35 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"InningsNumber", "BattingTeamId", "RunsScored", "WicketsTaken"})
+            table35.AddRow(New String() {"1", "2", "309", "10"})
+            table35.AddRow(New String() {"2", "1", "346", "10"})
+            table35.AddRow(New String() {"3", "2", "157", "10"})
+            table35.AddRow(New String() {"4", "1", "0", "0"})
+#ExternalSource("TestMatchTicker.feature",187)
+ testRunner.And("the innings scores are", CType(Nothing,String), table35, "And ")
+#End ExternalSource
+            Dim table36 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"CurrentInnings", "Day", "Status", "ResultCode"})
+            table36.AddRow(New String() {"4", "3", "In Progress", "None"})
+#ExternalSource("TestMatchTicker.feature",193)
+ testRunner.And("the match status is", CType(Nothing,String), table36, "And ")
+#End ExternalSource
+#ExternalSource("TestMatchTicker.feature",196)
+ testRunner.When("the cricket ticker is updated", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "When ")
+#End ExternalSource
+#ExternalSource("TestMatchTicker.feature",197)
  testRunner.Then("the ticker should display ""ENG:346+0/0 SA:309+157 D:3 In Progress""", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Then ")
 #End ExternalSource
             Me.ScenarioCleanup
@@ -459,35 +498,35 @@ Me.ScenarioSetup(scenarioInfo)
          NUnit.Framework.DescriptionAttribute("Day three fourth innings stumps")>  _
         Public Overridable Sub DayThreeFourthInningsStumps()
             Dim scenarioInfo As TechTalk.SpecFlow.ScenarioInfo = New TechTalk.SpecFlow.ScenarioInfo("Day three fourth innings stumps", CType(Nothing,String()))
-#ExternalSource("TestMatchTicker.feature",182)
+#ExternalSource("TestMatchTicker.feature",199)
 Me.ScenarioSetup(scenarioInfo)
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",183)
+#ExternalSource("TestMatchTicker.feature",200)
  testRunner.Given("a live Test match", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Given ")
 #End ExternalSource
-            Dim table34 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"Id", "Abbreviation"})
-            table34.AddRow(New String() {"1", "ENG"})
-            table34.AddRow(New String() {"2", "SA"})
-#ExternalSource("TestMatchTicker.feature",184)
- testRunner.And("the teams are", CType(Nothing,String), table34, "And ")
+            Dim table37 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"Id", "Abbreviation"})
+            table37.AddRow(New String() {"1", "ENG"})
+            table37.AddRow(New String() {"2", "SA"})
+#ExternalSource("TestMatchTicker.feature",201)
+ testRunner.And("the teams are", CType(Nothing,String), table37, "And ")
 #End ExternalSource
-            Dim table35 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"InningsNumber", "BattingTeamId", "RunsScored", "WicketsTaken"})
-            table35.AddRow(New String() {"1", "2", "309", "10"})
-            table35.AddRow(New String() {"2", "1", "346", "10"})
-            table35.AddRow(New String() {"3", "2", "157", "10"})
-            table35.AddRow(New String() {"4", "1", "100", "4"})
-#ExternalSource("TestMatchTicker.feature",188)
- testRunner.And("the innings scores are", CType(Nothing,String), table35, "And ")
+            Dim table38 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"InningsNumber", "BattingTeamId", "RunsScored", "WicketsTaken"})
+            table38.AddRow(New String() {"1", "2", "309", "10"})
+            table38.AddRow(New String() {"2", "1", "346", "10"})
+            table38.AddRow(New String() {"3", "2", "157", "10"})
+            table38.AddRow(New String() {"4", "1", "100", "4"})
+#ExternalSource("TestMatchTicker.feature",205)
+ testRunner.And("the innings scores are", CType(Nothing,String), table38, "And ")
 #End ExternalSource
-            Dim table36 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"CurrentInnings", "Day", "Status", "ResultCode"})
-            table36.AddRow(New String() {"4", "3", "Stumps", "None"})
-#ExternalSource("TestMatchTicker.feature",194)
- testRunner.And("the match status is", CType(Nothing,String), table36, "And ")
+            Dim table39 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"CurrentInnings", "Day", "Status", "ResultCode"})
+            table39.AddRow(New String() {"4", "3", "Stumps", "None"})
+#ExternalSource("TestMatchTicker.feature",211)
+ testRunner.And("the match status is", CType(Nothing,String), table39, "And ")
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",197)
+#ExternalSource("TestMatchTicker.feature",214)
  testRunner.When("the cricket ticker is updated", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "When ")
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",198)
+#ExternalSource("TestMatchTicker.feature",215)
  testRunner.Then("the ticker should display ""ENG:346+100/4 SA:309+157 D:3 Stumps""", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Then ")
 #End ExternalSource
             Me.ScenarioCleanup
@@ -497,38 +536,38 @@ Me.ScenarioSetup(scenarioInfo)
          NUnit.Framework.DescriptionAttribute("Day four fourth innings match finished")>  _
         Public Overridable Sub DayFourFourthInningsMatchFinished()
             Dim scenarioInfo As TechTalk.SpecFlow.ScenarioInfo = New TechTalk.SpecFlow.ScenarioInfo("Day four fourth innings match finished", CType(Nothing,String()))
-#ExternalSource("TestMatchTicker.feature",200)
+#ExternalSource("TestMatchTicker.feature",217)
 Me.ScenarioSetup(scenarioInfo)
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",201)
+#ExternalSource("TestMatchTicker.feature",218)
  testRunner.Given("a live Test match", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Given ")
 #End ExternalSource
-            Dim table37 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"Id", "Abbreviation"})
-            table37.AddRow(New String() {"1", "ENG"})
-            table37.AddRow(New String() {"2", "SA"})
-#ExternalSource("TestMatchTicker.feature",202)
- testRunner.And("the teams are", CType(Nothing,String), table37, "And ")
+            Dim table40 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"Id", "Abbreviation"})
+            table40.AddRow(New String() {"1", "ENG"})
+            table40.AddRow(New String() {"2", "SA"})
+#ExternalSource("TestMatchTicker.feature",219)
+ testRunner.And("the teams are", CType(Nothing,String), table40, "And ")
 #End ExternalSource
-            Dim table38 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"InningsNumber", "BattingTeamId", "RunsScored", "WicketsTaken"})
-            table38.AddRow(New String() {"1", "2", "309", "10"})
-            table38.AddRow(New String() {"2", "1", "346", "10"})
-            table38.AddRow(New String() {"3", "2", "157", "10"})
-            table38.AddRow(New String() {"4", "1", "121", "5"})
-#ExternalSource("TestMatchTicker.feature",206)
- testRunner.And("the innings scores are", CType(Nothing,String), table38, "And ")
+            Dim table41 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"InningsNumber", "BattingTeamId", "RunsScored", "WicketsTaken"})
+            table41.AddRow(New String() {"1", "2", "309", "10"})
+            table41.AddRow(New String() {"2", "1", "346", "10"})
+            table41.AddRow(New String() {"3", "2", "157", "10"})
+            table41.AddRow(New String() {"4", "1", "121", "5"})
+#ExternalSource("TestMatchTicker.feature",223)
+ testRunner.And("the innings scores are", CType(Nothing,String), table41, "And ")
 #End ExternalSource
-            Dim table39 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"CurrentInnings", "Day", "Status", "ResultCode"})
-            table39.AddRow(New String() {"4", "4", "Match Ended", "Result"})
-#ExternalSource("TestMatchTicker.feature",212)
- testRunner.And("the match status is", CType(Nothing,String), table39, "And ")
+            Dim table42 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"CurrentInnings", "Day", "Status", "ResultCode"})
+            table42.AddRow(New String() {"4", "4", "Match Ended", "Result"})
+#ExternalSource("TestMatchTicker.feature",229)
+ testRunner.And("the match status is", CType(Nothing,String), table42, "And ")
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",215)
+#ExternalSource("TestMatchTicker.feature",232)
  testRunner.And("the winning team Id is 1", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "And ")
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",216)
+#ExternalSource("TestMatchTicker.feature",233)
  testRunner.When("the cricket ticker is updated", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "When ")
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",217)
+#ExternalSource("TestMatchTicker.feature",234)
  testRunner.Then("the ticker should display ""ENG:346+121[W] SA:309+157 D:4 Match Ended""", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Then ")
 #End ExternalSource
             Me.ScenarioCleanup
@@ -538,34 +577,34 @@ Me.ScenarioSetup(scenarioInfo)
          NUnit.Framework.DescriptionAttribute("Team asked to follow on")>  _
         Public Overridable Sub TeamAskedToFollowOn()
             Dim scenarioInfo As TechTalk.SpecFlow.ScenarioInfo = New TechTalk.SpecFlow.ScenarioInfo("Team asked to follow on", CType(Nothing,String()))
-#ExternalSource("TestMatchTicker.feature",219)
+#ExternalSource("TestMatchTicker.feature",236)
 Me.ScenarioSetup(scenarioInfo)
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",220)
+#ExternalSource("TestMatchTicker.feature",237)
  testRunner.Given("a live Test match", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Given ")
 #End ExternalSource
-            Dim table40 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"Id", "Abbreviation"})
-            table40.AddRow(New String() {"1", "NZ"})
-            table40.AddRow(New String() {"2", "SA"})
-#ExternalSource("TestMatchTicker.feature",221)
- testRunner.And("the teams are", CType(Nothing,String), table40, "And ")
+            Dim table43 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"Id", "Abbreviation"})
+            table43.AddRow(New String() {"1", "NZ"})
+            table43.AddRow(New String() {"2", "SA"})
+#ExternalSource("TestMatchTicker.feature",238)
+ testRunner.And("the teams are", CType(Nothing,String), table43, "And ")
 #End ExternalSource
-            Dim table41 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"InningsNumber", "BattingTeamId", "RunsScored", "WicketsTaken"})
-            table41.AddRow(New String() {"1", "2", "525", "10"})
-            table41.AddRow(New String() {"2", "1", "121", "10"})
-            table41.AddRow(New String() {"3", "1", "157", "4"})
-#ExternalSource("TestMatchTicker.feature",225)
- testRunner.And("the innings scores are", CType(Nothing,String), table41, "And ")
+            Dim table44 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"InningsNumber", "BattingTeamId", "RunsScored", "WicketsTaken"})
+            table44.AddRow(New String() {"1", "2", "525", "10"})
+            table44.AddRow(New String() {"2", "1", "121", "10"})
+            table44.AddRow(New String() {"3", "1", "157", "4"})
+#ExternalSource("TestMatchTicker.feature",242)
+ testRunner.And("the innings scores are", CType(Nothing,String), table44, "And ")
 #End ExternalSource
-            Dim table42 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"CurrentInnings", "Day", "Status", "ResultCode"})
-            table42.AddRow(New String() {"3", "3", "Stumps", "None"})
-#ExternalSource("TestMatchTicker.feature",230)
- testRunner.And("the match status is", CType(Nothing,String), table42, "And ")
+            Dim table45 As TechTalk.SpecFlow.Table = New TechTalk.SpecFlow.Table(New String() {"CurrentInnings", "Day", "Status", "ResultCode"})
+            table45.AddRow(New String() {"3", "3", "Stumps", "None"})
+#ExternalSource("TestMatchTicker.feature",247)
+ testRunner.And("the match status is", CType(Nothing,String), table45, "And ")
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",233)
+#ExternalSource("TestMatchTicker.feature",250)
  testRunner.When("the cricket ticker is updated", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "When ")
 #End ExternalSource
-#ExternalSource("TestMatchTicker.feature",234)
+#ExternalSource("TestMatchTicker.feature",251)
  testRunner.Then("the ticker should display ""NZ:121+157/4 SA:525 D:3 Stumps""", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Then ")
 #End ExternalSource
             Me.ScenarioCleanup

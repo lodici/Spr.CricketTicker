@@ -36,10 +36,6 @@ Namespace Forms
             _presenter.UpdateTicker()
         End Sub
 
-        Private Sub Button1_Click(sender As System.Object, e As EventArgs) Handles Button1.Click
-            Close()
-        End Sub
-
         Private Sub Label1_MouseDown(sender As Object, e As MouseEventArgs) Handles Label1.MouseDown
             If e.Button = MouseButtons.Left Then
                 DragForm()
@@ -70,6 +66,19 @@ Namespace Forms
             Else
                 _tickerToolTip.SetToolTip(Label1, details)
             End If
+        End Sub
+
+        Private Sub CloseToolStripMenuItem_Click(sender As Object, e As System.EventArgs) Handles CloseToolStripMenuItem.Click
+            Close()
+        End Sub
+
+        Private Sub ReverseScoreToolStripMenuItem_Click(sender As Object, e As System.EventArgs) Handles ReverseScoreToolStripMenuItem.Click
+            ReverseScoreToolStripMenuItem.Checked = Not ReverseScoreToolStripMenuItem.Checked
+            _presenter.SetReverseScoreFormat(ReverseScoreToolStripMenuItem.Checked)
+        End Sub
+
+        Public Sub SetReverseScoreDisplayOption(value As Boolean) Implements Library.ICricketTickerView.SetReverseScoreDisplayOption
+            ReverseScoreToolStripMenuItem.Checked = value
         End Sub
 
     End Class

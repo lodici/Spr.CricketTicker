@@ -7,11 +7,11 @@
 	<?define ProductExe = "Spr.CricketTicker.exe" ?>	
 	
 	<?define MajorVersion = "1" ?>
-	<?define MinorVersion = "2" ?>
+	<?define MinorVersion = "4" ?>
 	<?ifdef env.BUILD_NUMBER ?>
 		<?define BuildNumber = "$(env.BUILD_NUMBER)" ?>
 	<?else?>
-		<?define BuildNumber = "100" ?>
+		<?define BuildNumber = "999" ?>
 	<?endif?>
 		
 	<Product Id="*"
@@ -66,6 +66,7 @@
  
 		<!-- FILES -->
 		<DirectoryRef Id="DIR_Product">
+			<!-- Core Binaries -->			
 			<Component Id="COM_MainExecutable" Guid="90288199-59E2-4706-B324-20D8306B2545">
 				<File Id="FILE_exe"
 					  Name="$(var.ProductExe)"
@@ -78,16 +79,6 @@
 					  Source="..\..\bin\$(var.Configuration)\Spr.CricketTicker.Library.dll"
 					  KeyPath="yes" />
 			</Component>
-			<Component Id="COM_LoggerDll" Guid="810A4C68-6D89-48CA-AC56-9B46E427E4DA">
-				<File Id="FILE_LoggerDll"
-					  Source="..\..\bin\$(var.Configuration)\log4net.dll"
-					  KeyPath="yes" />
-			</Component>
-			<Component Id="COM_Config" Guid="E03CDBFA-D86D-4259-AF8D-4A4EA1F2BB30">
-				<File Id="FILE_Config"
-					  Source="..\..\bin\$(var.Configuration)\$(var.ProductExe).config"
-					  KeyPath="yes" />
-			</Component>			
 			<Component Id="COM_ExtensionsDll" Guid="0E56C2C6-77CA-4CBE-B014-F333F49B4ED9">
 				<File Id="FILE_ExtensionsDll"
 					  Source="..\..\bin\$(var.Configuration)\Spr.Library.Extensions.dll"
@@ -97,7 +88,29 @@
 				<File Id="FILE_YahooQueryLanguageDll"
 					  Source="..\..\bin\$(var.Configuration)\Spr.YahooQueryLanguage.dll"
 					  KeyPath="yes" />
+			</Component>
+			<Component Id="COM_SettingsDll" Guid="8C87FCBE-BA50-4F5D-A921-14525AC25E00">
+				<File Id="FILE_SettingsDll"
+					  Source="..\..\bin\$(var.Configuration)\Spr.CricketTicker.Settings.dll"
+					  KeyPath="yes" />
 			</Component>			
+			<!-- Configuration -->
+			<Component Id="COM_Config" Guid="E03CDBFA-D86D-4259-AF8D-4A4EA1F2BB30">
+				<File Id="FILE_Config"
+					  Source="..\..\bin\$(var.Configuration)\$(var.ProductExe).config"
+					  KeyPath="yes" />
+			</Component>						
+			<!-- External Libraries -->
+			<Component Id="COM_LoggerDll" Guid="810A4C68-6D89-48CA-AC56-9B46E427E4DA">
+				<File Id="FILE_LoggerDll"
+					  Source="..\..\bin\$(var.Configuration)\log4net.dll"
+					  KeyPath="yes" />
+			</Component>			
+			<Component Id="COM_NiniDll" Guid="3B1CA806-6DD7-46C4-B022-1A9715D2A5E8">
+				<File Id="FILE_NiniDll"
+					  Source="..\..\bin\$(var.Configuration)\Nini.dll"
+					  KeyPath="yes" />
+			</Component>						
 		</DirectoryRef>
  
 		<!-- SHORTCUTS -->
@@ -147,12 +160,18 @@
  
 		<!-- Every component must be included in a feature -->
 		<Feature Id="CoreFiles" Title="$(var.ProductName) Core Files" Level="1">
+			<!-- Core Binaries -->
 			<ComponentRef Id="COM_MainExecutable"/>
 			<ComponentRef Id="COM_LibraryDll"/>
-			<ComponentRef Id="COM_LoggerDll"/>
-			<ComponentRef Id="COM_Config"/>
 			<ComponentRef Id="COM_ExtensionsDll"/>
 			<ComponentRef Id="COM_YahooQueryLanguageDll"/>
+			<ComponentRef Id="COM_SettingsDll"/>
+			<!-- External Binaries -->
+			<ComponentRef Id="COM_LoggerDll"/>
+			<ComponentRef Id="COM_NiniDll"/>
+			<!-- Configuration -->
+			<ComponentRef Id="COM_Config"/>						
+			<!-- Shortcuts -->
 			<ComponentRef Id="COM_SprShortcuts"/>
 			<ComponentRef Id="COM_AppShortcuts"/>
 		</Feature>		

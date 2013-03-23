@@ -8,17 +8,17 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("Spr.CricketTicker.SampleFeeds")> 
+<Assembly: AssemblyTitle("Spr.CricketTicker.Settings")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("SPR")> 
 <Assembly: AssemblyProduct("SPR International Cricket Ticker")> 
-<Assembly: AssemblyCopyright("Copyright © SPR  2012")> 
+<Assembly: AssemblyCopyright("Copyright ©  2013")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("c15fa1a2-fdef-4234-b8df-7157b14339dc")> 
+<Assembly: Guid("8d2de333-d212-4e5e-add7-581f9f4feb47")> 
 
 ' Version information for an assembly consists of the following four values:
 '
