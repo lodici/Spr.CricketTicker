@@ -22,6 +22,7 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Spr.YahooQueryLanguage", "S
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{821469CF-3AD4-4141-89D1-EF90CA4FDCE7}"
 	ProjectSection(SolutionItems) = preProject
+		CHANGES.md = CHANGES.md
 		notes.md = notes.md
 		..\README.md = ..\README.md
 		Spr.CricketTicker.FxCop = Spr.CricketTicker.FxCop
