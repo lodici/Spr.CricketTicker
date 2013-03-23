@@ -35,7 +35,8 @@
     <OutputPath>..\..\bin\Release\</OutputPath>
     <DocumentationFile>Spr.CricketTicker.Library.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
-    <DefineConstants>LOGFEED=1</DefineConstants>
+    <DefineConstants>
+    </DefineConstants>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
