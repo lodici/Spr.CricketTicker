@@ -6,6 +6,23 @@ Feature: OneDayMatchTicker
 ## What about a draw in T20?
 ##
 
+Scenario: Display score using Oz format
+	Given a live One Day match
+	And the teams are
+	| Id | Abbreviation |
+	| 1  | ENG          |
+	| 2  | SA           | 
+	And the innings scores are 
+	| InningsNumber | BattingTeamId | RunsScored | WicketsTaken | Overs | Run Rate | Req Run Rate |
+	| 1             | 1             | 188        | 8            | 20    | 9.4      | 0.0          |
+	| 2             | 2             | 123        | 7            | 15.5  | 6.2      | 16.3         |
+	And the match status is
+	| CurrentInnings | Status | ResultCode |
+	| 2              | Drinks | None       |
+	And the score should be displayed using the Oz format
+	When the cricket ticker is updated
+	Then the ticker should display "ENG:188 SA:7/123 Drinks"
+
 Scenario: Drinks
 	Given a live One Day match
 	And the teams are

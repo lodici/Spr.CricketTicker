@@ -95,6 +95,11 @@ Namespace Spr.CricketTicker.SpecTests
             End With
         End Sub
 
+        <TechTalk.SpecFlow.Given("the score should be displayed using the Oz format")> _
+        Public Sub GivenTheScoreShouldBeDisplayedUsingTheOzFormat()
+            _cricketMatch.ReverseScoreDisplay = True
+        End Sub
+
         <TechTalk.SpecFlow.Given("the innings scores are")> _
         Public Sub GivenTheInningsScoresAre(ByVal table As Table)
             For Each row As TableRow In table.Rows

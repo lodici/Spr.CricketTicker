@@ -7,10 +7,10 @@
     </ProductVersion>
     <SchemaVersion>
     </SchemaVersion>
-    <ProjectGuid>{14766290-2962-4DF8-A25A-67C3B53EAC5F}</ProjectGuid>
+    <ProjectGuid>{D984B6E2-2A0B-4A24-BE89-BE4FDBA9EBBE}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Spr.CricketTicker.Library</RootNamespace>
-    <AssemblyName>Spr.CricketTicker.Library</AssemblyName>
+    <RootNamespace>Spr.CricketTicker.Settings</RootNamespace>
+    <AssemblyName>Spr.CricketTicker.Settings</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
@@ -23,9 +23,8 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>..\..\bin\Debug\</OutputPath>
-    <DocumentationFile>Spr.CricketTicker.Library.xml</DocumentationFile>
+    <DocumentationFile>Spr.CricketTicker.Settings.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
-    <DefineConstants>LOGFEED=0</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -33,9 +32,8 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>..\..\bin\Release\</OutputPath>
-    <DocumentationFile>Spr.CricketTicker.Library.xml</DocumentationFile>
+    <DocumentationFile>Spr.CricketTicker.Settings.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
-    <DefineConstants>LOGFEED=1</DefineConstants>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -50,34 +48,28 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="log4net">
-      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
+    <Reference Include="Nini">
+      <HintPath>..\packages\Trove.Nini.1.1.0.0\lib\net20\Nini.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="System" />
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
     <Import Include="System.Diagnostics" />
     <Import Include="System.Linq" />
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\CricketTeam.vb" />
-    <Compile Include="Classes\Innings.vb" />
-    <Compile Include="Classes\CricketMatch\OneDayMatch.vb" />
-    <Compile Include="Classes\CricketMatch\CricketMatch.vb" />
-    <Compile Include="Modules\SprSnippets.vb" />
-    <Compile Include="Classes\Ticker\CricketTickerPresenter.vb" />
-    <Compile Include="Classes\GameSelector\IGameSelectorView.vb" />
-    <Compile Include="Classes\GameSelector\GameSelectorPresenter.vb" />
-    <Compile Include="Classes\Ticker\ICricketTickerView.vb" />
-    <Compile Include="Classes\IFeedProvider.vb" />
+    <Compile Include="UserSettings.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -93,9 +85,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Classes\ICricketService.vb" />
-    <Compile Include="Classes\UpcomingMatch.vb" />
-    <Compile Include="Classes\CricketMatch\TestMatch.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -106,7 +95,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -117,12 +105,6 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Spr.CricketTicker.Settings\Spr.CricketTicker.Settings.vbproj">
-      <Project>{D984B6E2-2A0B-4A24-BE89-BE4FDBA9EBBE}</Project>
-      <Name>Spr.CricketTicker.Settings</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />

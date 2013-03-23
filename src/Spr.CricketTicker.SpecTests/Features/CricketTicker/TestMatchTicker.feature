@@ -1,6 +1,23 @@
 ﻿@TestMatch
 Feature: TestMatchTicker
 
+Scenario: Display score using Oz format
+	Given a live Test match
+	And the teams are
+	| Id | Abbreviation |
+	| 1  | ENG          |
+	| 2  | SA           |
+	And the innings scores are 
+	| InningsNumber | BattingTeamId | RunsScored | WicketsTaken |
+	| 1             | 2             | 309        | 10           |
+	| 2             | 1             | 208        | 5            |
+	And the match status is
+	| CurrentInnings | Day | Status      | ResultCode |
+	| 2              | 2   | In Progress | None       |
+	And the score should be displayed using the Oz format
+	When the cricket ticker is updated
+	Then the ticker should display "ENG:5/208 SA:309 D:2 In Progress"
+
 Scenario: Match yet to begin
 	Given a live Test match
 	And the teams are
