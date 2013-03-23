@@ -31,8 +31,8 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.3.0.*")> 
-<Assembly: AssemblyFileVersion("1.3.0.0")> 
+<Assembly: AssemblyVersion("1.4.0.*")> 
+<Assembly: AssemblyFileVersion("1.4.0.0")> 
 
 '// Link log4net to app.config and watch for changes.
 <Assembly: log4net.Config.XmlConfigurator(Watch:=True)> 
