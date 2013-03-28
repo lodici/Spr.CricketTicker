@@ -147,6 +147,10 @@
       <Project>{308A2674-D504-43D8-8D55-300842C3E10F}</Project>
       <Name>Spr.CricketTicker.SampleFeeds</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Spr.CricketTicker.Settings\Spr.CricketTicker.Settings.vbproj">
+      <Project>{D984B6E2-2A0B-4A24-BE89-BE4FDBA9EBBE}</Project>
+      <Name>Spr.CricketTicker.Settings</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Spr.YahooQueryLanguageFeed\Spr.YahooQueryLanguage.vbproj">
       <Project>{27954FCC-2543-418D-9178-EF4734780324}</Project>
       <Name>Spr.YahooQueryLanguage</Name>

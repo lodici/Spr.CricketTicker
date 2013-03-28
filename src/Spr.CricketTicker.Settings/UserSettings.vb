@@ -3,11 +3,57 @@ Imports Nini.Config
 
 Public Class UserSettings
 
+    Public Enum TickerColorTheme
+        [Default] = 0
+        Desktop
+        WindowTitleBar
+    End Enum
+
     Private Shared _settings As IConfigSource
 
     ''' <remarks>Public Not Creatable</remarks>
     Protected Sub New()
     End Sub
+
+    Public Shared Property TickerOnTop As Boolean
+        Get
+            Return Settings("Display").GetBoolean("TickerOnTop", True)
+        End Get
+        Set(value As Boolean)
+            Settings("Display").Set("TickerOnTop", value)
+        End Set
+    End Property
+
+    Public Shared ReadOnly Property MinTickerOpacity As Integer
+        Get
+            Return 40
+        End Get
+    End Property
+
+    ''' <summary>
+    ''' Return value between 0.30 and 1.0.
+    ''' </summary>
+    Public Shared Property TickerOpacity As Integer
+        Get
+            Return Settings("Display").GetInt("TickerOpacity", 100)
+        End Get
+        Set(value As Integer)
+            If value >= MinTickerOpacity And value <= 100 Then
+                Settings("Display").Set("TickerOpacity", value)
+            Else
+                Throw New ArgumentOutOfRangeException()
+            End If
+        End Set
+    End Property
+
+    Public Shared Property TickerColor As TickerColorTheme
+        Get
+            Return CType(Settings("Display").GetInt("TickerColor", TickerColorTheme.Default), TickerColorTheme)
+        End Get
+        Set(value As TickerColorTheme)
+            Settings("Display").Set("TickerColor", CInt(value))
+        End Set
+    End Property
 
     ''' <summary>
     ''' False by default. If true then ticker displays score using the Australian format (wickets/runs).
