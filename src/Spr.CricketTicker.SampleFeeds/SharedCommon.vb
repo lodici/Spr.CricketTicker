@@ -17,6 +17,7 @@ Public Class SharedCommon
         UpcomingIncludingThreeWorldCup
         MissingSubSeries
         BigScoreDoesNotFit
+        BigScoreDoesNotFit2
         WomensOdi
     End Enum
 
@@ -63,6 +64,8 @@ Public Class SharedCommon
                 Return "MissingSubSeries"
             Case XmlFeeds.BigScoreDoesNotFit
                 Return "BigScoreDoesNotFitInTicker"
+            Case XmlFeeds.BigScoreDoesNotFit2
+                Return "BigScoreDoesNotFitInTicker2"
             Case Else
                 Throw New IndexOutOfRangeException
         End Select
