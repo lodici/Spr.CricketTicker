@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<query xmlns:yahoo="http://www.yahooapis.com/v1/base.rng" yahoo:count="3" yahoo:created="2013-03-24T10:27:57Z" yahoo:lang="en-US">
+  <diagnostics>
+    <publiclyCallable>true</publiclyCallable>
+    <url execution-start-time="1" execution-stop-time="2" execution-time="1" proxy="DEFAULT"><![CDATA[store://3vynIg3fvfgqWvJcDWyob0]]></url>
+    <url execution-start-time="3" execution-stop-time="800" execution-time="797"><![CDATA[http://cricketwebservice/ws/cwsapi/live/livematches.php?output=summary]]></url>
+    <user-time>801</user-time>
+    <service-time>798</service-time>
+    <build-version>34910</build-version>
+  </diagnostics>
+  <results>
+    <Scorecard>
+      <v>0</v>
+      <mid>185190</mid>
+      <m>1</m>
+      <series>
+        <series_id>11386</series_id>
+        <series_name>Australia in India, 4 Test Series, 2013</series_name>
+      </series>
+      <place>
+        <vid>54</vid>
+        <stadium>Feroz Shah Kotla, Delhi</stadium>
+        <city>Delhi</city>
+        <country>India</country>
+        <Gimaget>http://l.yimg.com/qx/cricket/fufp/images/venue_54_thumb-29-3-2011-cd3e66e8a724beb6bc5853aefd75440b.jpg</Gimaget>
+        <date>20130322040000</date>
+        <enddate>20130324103159</enddate>
+      </place>
+      <mn>4th Test</mn>
+      <teams>
+        <i>4</i>
+        <fn>India</fn>
+        <sn>IND</sn>
+        <logo>
+          <std>http://l.yimg.com/qx/cricket/fufp/images/india-18-2-2013-672f1e40654b1619eadbcbbde8bfa54a.jpg</std>
+          <small>http://l.yimg.com/qx/cricket/fufp/images/india_small-18-2-2013-d2608bf7247972c8be0113bb7f54b422.jpg</small>
+        </logo>
+        <flag>
+          <std>http://l.yimg.com/qx/cricket/fufp/images/india_flag-1-2-2011-0fa2af8a7fb72b445cf841cf27ff119a.gif</std>
+          <small>http://l.yimg.com/qx/cricket/fufp/images/india_flag_small-1-2-2011-19e94f1d1081d5dde82b381bf8c783b6.gif</small>
+          <roundstd>http://l.yimg.com/qx/cricket/fufp/images/4-11-2-2012-5651d44338907e593f94773398fac650.png</roundstd>
+          <roundsmall>http://l.yimg.com/qx/cricket/fufp/images/4_s-11-2-2012-dd77610cb84ba225571610f4d3b52097.png</roundsmall>
+          <roundlarge>http://l.yimg.com/qx/cricket/fufp/images/4_l-11-2-2012-b8ce58599a586b164189b090b45c07e1.png</roundlarge>
+        </flag>
+      </teams>
+      <teams>
+        <i>1</i>
+        <fn>Australia</fn>
+        <sn>AUS</sn>
+        <logo>
+          <std>http://l.yimg.com/qx/cricket/fufp/images/australia-1-2-2011-4a4cb35b25687f107ee2682c0dee250c.jpg</std>
+          <small>http://l.yimg.com/qx/cricket/fufp/images/australia_small-1-2-2011-98c88c625dc111d9428fe0ab181da888.jpg</small>
+        </logo>
+        <flag>
+          <std>http://l.yimg.com/qx/cricket/fufp/images/australia_flag-1-2-2011-5a85f74b5ef46c4d9669aa6814240776.gif</std>
+          <small>http://l.yimg.com/qx/cricket/fufp/images/australia_flag_small-1-2-2011-2801297b7b06aa33e14c9c0314536a15.gif</small>
+          <roundstd>http://l.yimg.com/qx/cricket/fufp/images/1-11-2-2012-8699b8a840e0f972d1276d094fc7c827.png</roundstd>
+          <roundsmall>http://l.yimg.com/qx/cricket/fufp/images/1_s-11-2-2012-280be956394485494566095b9e27426c.png</roundsmall>
+          <roundlarge>http://l.yimg.com/qx/cricket/fufp/images/1_l-11-2-2012-975ee512e59ffc420e26dee2813daa27.png</roundlarge>
+        </flag>
+      </teams>
+      <past_ings>
+        <s>
+          <t>1</t>
+          <i>4</i>
+          <ps>0</ps>
+          <stay_live>Yes</stay_live>
+          <pms>complete</pms>
+          <dm>Day 3</dm>
+          <sn>3</sn>
+          <ro>5.4</ro>
+          <a>
+            <fo>0</fo>
+            <pp />
+            <i>4</i>
+            <cr>5.04</cr>
+            <r>158</r>
+            <o>31.2</o>
+            <w>4</w>
+            <b>9</b>
+            <lb>1</lb>
+            <wd>0</wd>
+            <nb>0</nb>
+            <pt>0</pt>
+            <l>0</l>
+            <cp>
+              <cp>30</cp>
+              <bls>28</bls>
+              <s>0</s>
+            </cp>
+          </a>
+          <rts>1364120458</rts>
+          <lsn>
+            <sn>3</sn>
+            <r>86</r>
+            <w>3</w>
+            <rr>4.44</rr>
+          </lsn>
+          <tz>+05:30</tz>
+        </s>
+        <d>
+          <a>
+            <t>
+              <i>3896</i>
+              <a>3</a>
+              <c>not out</c>
+              <dt />
+              <fd>0</fd>
+              <bd>0</bd>
+              <b>92</b>
+              <r>82</r>
+              <sr>89.130434782609</sr>
+              <four>11</four>
+              <six>0</six>
+              <name>Cheteshwar Pujara</name>
+            </t>
+            <t>
+              <i>3676</i>
+              <a>3</a>
+              <c>not out</c>
+              <dt />
+              <fd>0</fd>
+              <bd>0</bd>
+              <b>14</b>
+              <r>12</r>
+              <sr>85.714285714286</sr>
+              <four>2</four>
+              <six>0</six>
+              <name>MS Dhoni</name>
+            </t>
+          </a>
+        </d>
+      </past_ings>
+      <past_ings>
+        <s>
+          <t>1</t>
+          <i>3</i>
+          <ps>0</ps>
+          <stay_live>Yes</stay_live>
+          <pms>live</pms>
+          <dm>Day 3</dm>
+          <sn>2</sn>
+          <a>
+            <fo>0</fo>
+            <pp />
+            <i>1</i>
+            <cr>3.52</cr>
+            <r>164</r>
+            <o>46.3</o>
+            <w>10</w>
+            <b>8</b>
+            <lb>2</lb>
+            <wd>0</wd>
+            <nb>0</nb>
+            <pt>0</pt>
+            <l>0</l>
+            <tl>leads by 154</tl>
+          </a>
+          <lsn>
+            <sn>2</sn>
+            <r>75</r>
+            <w>5</w>
+            <rr>4.83</rr>
+          </lsn>
+          <tz>+05:30</tz>
+        </s>
+      </past_ings>
+      <past_ings>
+        <s>
+          <t>1</t>
+          <i>2</i>
+          <ps>0</ps>
+          <stay_live>Yes</stay_live>
+          <pms>live</pms>
+          <dm>Day 3</dm>
+          <sn>1</sn>
+          <a>
+            <fo>0</fo>
+            <pp />
+            <i>4</i>
+            <cr>3.86</cr>
+            <r>272</r>
+            <o>70.2</o>
+            <w>10</w>
+            <b>12</b>
+            <lb>18</lb>
+            <wd>0</wd>
+            <nb>0</nb>
+            <pt>0</pt>
+            <l>0</l>
+            <tl>leads by 10</tl>
+          </a>
+          <lsn>
+            <sn>1</sn>
+            <r>6</r>
+            <w>2</w>
+            <rr>2.76</rr>
+          </lsn>
+          <tz>+05:30</tz>
+        </s>
+      </past_ings>
+      <past_ings>
+        <s>
+          <t>1</t>
+          <i>1</i>
+          <ps>0</ps>
+          <stay_live>Yes</stay_live>
+          <pms>live</pms>
+          <dm>Day 2</dm>
+          <sn>3</sn>
+          <ro>33.2</ro>
+          <a>
+            <fo>0</fo>
+            <pp />
+            <i>1</i>
+            <cr>2.33</cr>
+            <r>262</r>
+            <o>112.1</o>
+            <w>10</w>
+            <b>5</b>
+            <lb>7</lb>
+            <wd>0</wd>
+            <nb>0</nb>
+            <pt>0</pt>
+            <l>0</l>
+          </a>
+          <lsn>
+            <sn>3</sn>
+            <r>11</r>
+            <w>0</w>
+            <rr>6.6</rr>
+          </lsn>
+          <tz>+05:30</tz>
+        </s>
+      </past_ings>
+      <toss>
+        <win>1</win>
+        <bat>1</bat>
+        <text>xxx-xxx-xxx</text>
+      </toss>
+      <result>
+        <r>1</r>
+        <winner>4</winner>
+        <by>6</by>
+        <how>wickets</how>
+        <isdl>0</isdl>
+        <isso>0</isso>
+        <isff>0</isff>
+        <desc />
+      </result>
+      <ms>Match Ended</ms>
+      <mt>1</mt>
+      <cts>1364120872</cts>
+    </Scorecard>
+  </results>
+</query>
+<!-- total: 801 -->
+<!-- engine2.yql.bf1.yahoo.com -->

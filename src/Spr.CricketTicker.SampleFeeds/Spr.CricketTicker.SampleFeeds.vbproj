@@ -144,6 +144,7 @@
     <EmbeddedResource Include="Resources\YQL\cricket.scorecard.live.summary\WomensOdi.xml" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Resources\YQL\cricket.scorecard.live.summary\BigScoreDoesNotFitInTicker2.xml" />
     <Content Include="Resources\YQL\cricket.scorecard.live.summary\MatchEndedWinnerByDL.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

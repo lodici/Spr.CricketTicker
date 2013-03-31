@@ -25,8 +25,14 @@
         Private Sub InitializeComponent()
             Me.components = New System.ComponentModel.Container()
             Me.Label1 = New System.Windows.Forms.Label()
-            Me.TextBox1 = New System.Windows.Forms.TextBox()
             Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+            Me.TopMostToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.ColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.DefaultColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.DesktopColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.TitlebarColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.OpacityToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
             Me.ReverseScoreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
             Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
             Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -44,23 +50,53 @@
             Me.Label1.Text = "TTTT:000 TTTT:000/00 OV:00.0 RR:00.0/00.0"
             Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
             '
-            'TextBox1
-            '
-            Me.TextBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                Or System.Windows.Forms.AnchorStyles.Left) _
-                Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-            Me.TextBox1.Location = New System.Drawing.Point(1, 43)
-            Me.TextBox1.Multiline = True
-            Me.TextBox1.Name = "TextBox1"
-            Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both
-            Me.TextBox1.Size = New System.Drawing.Size(294, 0)
-            Me.TextBox1.TabIndex = 1
-            '
             'ContextMenuStrip1
             '
-            Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReverseScoreToolStripMenuItem, Me.ToolStripSeparator1, Me.CloseToolStripMenuItem})
+            Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TopMostToolStripMenuItem, Me.ColorToolStripMenuItem, Me.OpacityToolStripMenuItem, Me.ToolStripSeparator2, Me.ReverseScoreToolStripMenuItem, Me.ToolStripSeparator1, Me.CloseToolStripMenuItem})
             Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-            Me.ContextMenuStrip1.Size = New System.Drawing.Size(147, 54)
+            Me.ContextMenuStrip1.Size = New System.Drawing.Size(147, 126)
+            '
+            'TopMostToolStripMenuItem
+            '
+            Me.TopMostToolStripMenuItem.Name = "TopMostToolStripMenuItem"
+            Me.TopMostToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
+            Me.TopMostToolStripMenuItem.Text = "Keep on Top"
+            '
+            'ColorToolStripMenuItem
+            '
+            Me.ColorToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DefaultColorToolStripMenuItem, Me.DesktopColorToolStripMenuItem, Me.TitlebarColorToolStripMenuItem})
+            Me.ColorToolStripMenuItem.Name = "ColorToolStripMenuItem"
+            Me.ColorToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
+            Me.ColorToolStripMenuItem.Text = "Colour"
+            '
+            'DefaultColorToolStripMenuItem
+            '
+            Me.DefaultColorToolStripMenuItem.Name = "DefaultColorToolStripMenuItem"
+            Me.DefaultColorToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+            Me.DefaultColorToolStripMenuItem.Text = "Default"
+            '
+            'DesktopColorToolStripMenuItem
+            '
+            Me.DesktopColorToolStripMenuItem.Name = "DesktopColorToolStripMenuItem"
+            Me.DesktopColorToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+            Me.DesktopColorToolStripMenuItem.Text = "Desktop"
+            '
+            'TitlebarColorToolStripMenuItem
+            '
+            Me.TitlebarColorToolStripMenuItem.Name = "TitlebarColorToolStripMenuItem"
+            Me.TitlebarColorToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+            Me.TitlebarColorToolStripMenuItem.Text = "Window Titlebar"
+            '
+            'OpacityToolStripMenuItem
+            '
+            Me.OpacityToolStripMenuItem.Name = "OpacityToolStripMenuItem"
+            Me.OpacityToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
+            Me.OpacityToolStripMenuItem.Text = "Opacity..."
+            '
+            'ToolStripSeparator2
+            '
+            Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+            Me.ToolStripSeparator2.Size = New System.Drawing.Size(143, 6)
             '
             'ReverseScoreToolStripMenuItem
             '
@@ -86,11 +122,10 @@
             Me.ClientSize = New System.Drawing.Size(295, 16)
             Me.ContextMenuStrip = Me.ContextMenuStrip1
             Me.ControlBox = False
-            Me.Controls.Add(Me.TextBox1)
             Me.Controls.Add(Me.Label1)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.MaximizeBox = False
-            Me.MaximumSize = New System.Drawing.Size(412, 18)
+            Me.MaximumSize = New System.Drawing.Size(412, 218)
             Me.MinimizeBox = False
             Me.MinimumSize = New System.Drawing.Size(272, 18)
             Me.Name = "CricketTicker"
@@ -101,14 +136,19 @@
             Me.TopMost = True
             Me.ContextMenuStrip1.ResumeLayout(False)
             Me.ResumeLayout(False)
-            Me.PerformLayout()
 
         End Sub
         Friend WithEvents Label1 As System.Windows.Forms.Label
-        Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
         Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
         Friend WithEvents ReverseScoreToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
         Friend WithEvents CloseToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+        Friend WithEvents ColorToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+        Friend WithEvents DefaultColorToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+        Friend WithEvents DesktopColorToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+        Friend WithEvents TitlebarColorToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+        Friend WithEvents OpacityToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+        Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
+        Friend WithEvents TopMostToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     End Class
 End Namespace

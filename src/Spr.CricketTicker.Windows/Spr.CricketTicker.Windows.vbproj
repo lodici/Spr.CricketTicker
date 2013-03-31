@@ -28,7 +28,7 @@
     <OutputPath>..\..\bin\Debug\</OutputPath>
     <DocumentationFile>Spr.CricketTicker.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
-    <DefineConstants>USE_SAMPLE_FEED=0</DefineConstants>
+    <DefineConstants>USE_SAMPLE_FEED=1</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -146,6 +146,10 @@
     <ProjectReference Include="..\Spr.CricketTicker.SampleFeeds\Spr.CricketTicker.SampleFeeds.vbproj">
       <Project>{308A2674-D504-43D8-8D55-300842C3E10F}</Project>
       <Name>Spr.CricketTicker.SampleFeeds</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Spr.CricketTicker.Settings\Spr.CricketTicker.Settings.vbproj">
+      <Project>{D984B6E2-2A0B-4A24-BE89-BE4FDBA9EBBE}</Project>
+      <Name>Spr.CricketTicker.Settings</Name>
     </ProjectReference>
     <ProjectReference Include="..\Spr.YahooQueryLanguageFeed\Spr.YahooQueryLanguage.vbproj">
       <Project>{27954FCC-2543-418D-9178-EF4734780324}</Project>
